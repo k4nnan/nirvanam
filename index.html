@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nirvanam — Reclaimed Chettinad teak, repaired in brass</title>
+<meta name="description" content="Hundred-year-old Chettinad teak rescued from the mansions of Tamil Nadu and repaired in brass. One-of-a-kind pieces, each signed by its maker. Join the list for first access.">
+<meta property="og:title" content="Nirvanam — Furniture with a name attached">
+<meta property="og:description" content="Hundred-year-old Chettinad teak, rescued and repaired in brass. Every piece carries the name of the hand that made it.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nirvanam.co.uk">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://nirvanam.co.uk">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Hanken+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+:root{--ink:#17120F;--ink2:#1F1815;--teak:#8A5A3B;--teak2:#B08A5A;--brass:#C9A227;
+  --brass-lt:#E8CC6B;--paper:#F4EFE4;--soft:#A99B8A;--line:rgba(244,239,228,.13)}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--paper);font-family:'Hanken Grotesk',sans-serif;
+  font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;padding-bottom:112px}
+.wrap{max-width:900px;margin:0 auto;padding:0 24px}
+.grain{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.38;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.05'/%3E%3C/svg%3E")}
+main{position:relative;z-index:2}
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* HERO */
+.hero{position:relative;min-height:92vh;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;text-align:center;padding:64px 24px 56px;overflow:hidden}
+.hero .timber{position:absolute;inset:0;z-index:0}
+.hero .timber svg{width:100%;height:100%}
+.hero .veil{position:absolute;inset:0;z-index:1;
+  background:linear-gradient(180deg,rgba(23,18,15,.93) 0%,rgba(23,18,15,.70) 44%,rgba(23,18,15,.97) 100%)}
+.hero .in{position:relative;z-index:2;max-width:760px}
+.mark{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:44px}
+.mark svg{width:34px;height:34px}
+.wordmark{font-family:'Fraunces',serif;font-size:26px;font-weight:600;letter-spacing:-.015em;line-height:1}
+.tagline{font-family:'IBM Plex Mono',monospace;font-size:8.5px;letter-spacing:.34em;
+  text-transform:uppercase;color:var(--brass);margin-top:4px}
+.eyebrow{font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.3em;
+  text-transform:uppercase;color:var(--soft);margin-bottom:22px}
+h1{font-family:'Fraunces',serif;font-size:clamp(35px,6.6vw,66px);font-weight:500;
+  line-height:1.04;letter-spacing:-.022em;max-width:16ch;margin:0 auto}
+h1 em{font-style:italic;font-weight:400;color:var(--brass-lt)}
+.lede{font-size:clamp(16px,1.9vw,19px);color:#D6CBBA;max-width:44ch;margin:22px auto 0;line-height:1.6}
+.cue{margin-top:46px;font-family:'IBM Plex Mono',monospace;font-size:9px;
+  letter-spacing:.2em;text-transform:uppercase;color:#7E7263}
+.cue span{display:block;margin-top:8px;font-size:15px;animation:bob 2.4s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0);opacity:.45}50%{transform:translateY(5px);opacity:1}}
+
+section{padding:62px 0}
+.rule{height:1px;background:linear-gradient(to right,transparent,var(--line) 22%,var(--line) 78%,transparent)}
+.sec-h{text-align:center;margin-bottom:36px}
+.sec-h h2{font-family:'Fraunces',serif;font-size:clamp(22px,3.1vw,30px);font-weight:500;letter-spacing:-.014em}
+.sec-h p{color:var(--soft);font-size:15px;margin-top:8px}
+
+/* PROOF STRIP */
+.proof{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);
+  border:1px solid var(--line);border-radius:4px;overflow:hidden}
+.proof div{background:var(--ink2);padding:20px 16px;text-align:center}
+.proof b{display:block;font-family:'Fraunces',serif;font-size:25px;color:var(--brass-lt);line-height:1}
+.proof span{display:block;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--soft);margin-top:8px;line-height:1.5}
+
+/* STORY */
+.story{max-width:600px;margin:0 auto;text-align:center}
+.story p{font-size:17.5px;color:#CFC3B2;margin-bottom:1.05em;line-height:1.72}
+.story p:last-child{margin-bottom:0}
+.story strong{color:var(--paper);font-weight:600}
+
+/* LINES */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.card{border:1px solid var(--line);border-radius:4px;padding:24px 20px;
+  background:linear-gradient(165deg,rgba(244,239,228,.045),rgba(244,239,228,.012));
+  position:relative;overflow:hidden;transition:.25s}
+.card:hover{border-color:rgba(201,162,39,.42);transform:translateY(-2px)}
+.card.first{border-color:rgba(201,162,39,.44);
+  background:linear-gradient(165deg,rgba(201,162,39,.11),rgba(244,239,228,.02))}
+.badge{position:absolute;top:0;right:0;font-family:'IBM Plex Mono',monospace;font-size:7.5px;
+  letter-spacing:.16em;text-transform:uppercase;background:var(--brass);color:#241D08;
+  padding:4px 10px;border-radius:0 0 0 4px}
+.card .ico svg{width:34px;height:34px;display:block;margin-bottom:13px}
+.card h3{font-family:'Fraunces',serif;font-size:19px;font-weight:600;margin-bottom:3px}
+.card .sub{font-family:'IBM Plex Mono',monospace;font-size:8.5px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--brass);margin-bottom:10px}
+.card p{font-size:14px;color:#BFB3A2;line-height:1.56}
+.card .when{font-family:'IBM Plex Mono',monospace;font-size:9px;color:#7E7263;
+  margin-top:13px;padding-top:11px;border-top:1px solid var(--line);letter-spacing:.08em}
+
+/* PLATE */
+.plate{max-width:306px;margin:0 auto;border-radius:3px;padding:19px 22px;
+  background:linear-gradient(150deg,#E8CC6B,#C9A227 42%,#96790F);
+  font-family:'IBM Plex Mono',monospace;font-size:11px;line-height:2;color:#3A2F07;
+  text-align:left;box-shadow:0 8px 30px rgba(0,0,0,.42)}
+.plate .pl{opacity:.6}
+
+/* STICKY */
+.sticky{position:fixed;bottom:0;left:0;right:0;z-index:60;background:rgba(20,16,13,.975);
+  border-top:1px solid rgba(201,162,39,.45);backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);box-shadow:0 -10px 38px rgba(0,0,0,.55)}
+.sticky .in{max-width:900px;margin:0 auto;padding:13px 24px 15px;
+  display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.pitch{flex:1;min-width:190px}
+.pitch b{display:block;font-family:'Fraunces',serif;font-size:16px;font-weight:600;letter-spacing:-.01em}
+.pitch span{font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.05em;
+  color:var(--soft);display:block;margin-top:3px}
+.count{color:var(--brass-lt)}
+form{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+input[type=email]{width:224px;padding:12px 14px;border:1px solid var(--line);border-radius:3px;
+  background:rgba(244,239,228,.06);color:var(--paper);font-family:inherit;font-size:15px;transition:.2s}
+input[type=email]::placeholder{color:#7E7263}
+input[type=email]:focus{outline:none;border-color:var(--brass);background:rgba(244,239,228,.1)}
+button{padding:12px 22px;border:none;border-radius:3px;background:var(--brass);color:#241D08;
+  font-family:inherit;font-size:15px;font-weight:600;cursor:pointer;transition:.2s;white-space:nowrap}
+button:hover{background:var(--brass-lt)}
+/* step 2: segment */
+.seg{display:none;width:100%;padding-top:4px}
+.seg.on{display:block}
+.seg .q{font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--soft);margin-bottom:8px}
+.chips{display:flex;gap:7px;flex-wrap:wrap}
+.chip{padding:8px 13px;border:1px solid var(--line);border-radius:16px;background:rgba(244,239,228,.05);
+  font-family:inherit;font-size:13px;color:var(--paper);cursor:pointer;transition:.18s}
+.chip:hover{border-color:rgba(201,162,39,.5)}
+.chip.on{background:var(--brass);border-color:var(--brass);color:#241D08;font-weight:600}
+.done{display:none;font-family:'Fraunces',serif;font-size:16.5px;color:var(--brass-lt);width:100%}
+.done.on{display:block}
+.done small{display:block;font-family:'IBM Plex Mono',monospace;font-size:9.5px;
+  color:var(--soft);margin-top:5px;letter-spacing:.05em}
+
+footer{padding:40px 0 26px;text-align:center;border-top:1px solid var(--line)}
+.social{display:flex;gap:20px;justify-content:center;margin-bottom:16px;flex-wrap:wrap}
+.social a{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.12em;
+  color:var(--soft);text-decoration:none;transition:.2s}
+.social a:hover{color:var(--brass)}
+.fnote{font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:#6E6357;letter-spacing:.08em;line-height:2}
+
+@media(max-width:820px){.grid{grid-template-columns:1fr}.proof{grid-template-columns:1fr}}
+@media(max-width:620px){
+  .sticky .in{flex-direction:column;align-items:stretch;gap:9px;padding:11px 18px 13px}
+  .pitch{text-align:center}form{justify-content:center}
+  input[type=email]{width:100%}button{width:100%}
+  body{padding-bottom:158px}
+  .chips{justify-content:center}
+}
+</style>
+</head>
+<body>
+<div class="grain"></div>
+<main>
+
+<section class="hero">
+  <div class="timber">
+    <svg viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <defs><linearGradient id="tk" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#9E6B42"/><stop offset=".45" stop-color="#7C4F32"/>
+        <stop offset="1" stop-color="#482D1D"/></linearGradient></defs>
+      <rect width="1200" height="900" fill="url(#tk)"/>
+      <g fill="none" stroke="#4A2F1E" stroke-width="2.4" opacity=".42">
+        <path d="M0 70 q300 -26 600 0 t600 0"/><path d="M0 150 q300 -30 600 0 t600 0"/>
+        <path d="M0 236 q300 -22 600 0 t600 0"/><path d="M0 318 q300 -34 600 0 t600 0"/>
+        <path d="M0 402 q300 -24 600 0 t600 0"/><path d="M0 486 q300 -30 600 0 t600 0"/>
+        <path d="M0 566 q300 -22 600 0 t600 0"/><path d="M0 648 q300 -32 600 0 t600 0"/>
+        <path d="M0 730 q300 -26 600 0 t600 0"/><path d="M0 812 q300 -30 600 0 t600 0"/></g>
+      <g fill="none" stroke="#38230F" stroke-width="1.4" opacity=".3">
+        <path d="M0 110 q300 -20 600 0 t600 0"/><path d="M0 274 q300 -26 600 0 t600 0"/>
+        <path d="M0 444 q300 -22 600 0 t600 0"/><path d="M0 606 q300 -28 600 0 t600 0"/></g>
+      <ellipse cx="298" cy="392" rx="26" ry="17" fill="#3E2818" opacity=".55"/>
+      <ellipse cx="298" cy="392" rx="12" ry="8" fill="#2A1A0F" opacity=".65"/>
+      <ellipse cx="884" cy="614" rx="20" ry="13" fill="#3E2818" opacity=".5"/>
+      <path d="M672 0 l-16 172 l24 148 l-20 196 l18 210 l-10 174" fill="none" stroke="#0F0A06" stroke-width="11" opacity=".74"/>
+      <path d="M672 0 l-16 172 l24 148 l-20 196 l18 210 l-10 174" fill="none" stroke="#000" stroke-width="4" opacity=".45"/>
+    </svg>
+  </div>
+  <div class="veil"></div>
+  <div class="in">
+    <div class="mark">
+      <svg viewBox="0 0 100 100" aria-hidden="true">
+        <circle cx="50" cy="50" r="6" fill="#C9A227"/>
+        <circle cx="51" cy="49" r="15" fill="none" stroke="#C9A227" stroke-width="5"/>
+        <circle cx="49" cy="51" r="26" fill="none" stroke="#B08A5A" stroke-width="3.5"/>
+        <circle cx="51" cy="50" r="36" fill="none" stroke="#B08A5A" stroke-width="5"/>
+        <circle cx="50" cy="50" r="45" fill="none" stroke="#B08A5A" stroke-width="2.5"/>
+      </svg>
+      <div><div class="wordmark">Nirvanam</div><div class="tagline">Wales &middot; Chettinad</div></div>
+    </div>
+    <div class="eyebrow" id="ey">Coming 2027 &middot; Karaikudi</div>
+    <h1 id="h1">Furniture with a <em>name</em> attached</h1>
+    <p class="lede" id="ld">Hundred-year-old Chettinad teak, rescued from the mansions of Tamil Nadu and repaired in brass. Every piece carries the name of the hand that made it.</p>
+    <div class="cue">Read on<span>&darr;</span></div>
+  </div>
+</section>
+
+<section class="reveal"><div class="wrap">
+  <div class="proof">
+    <div><b>c.1920</b><span>Age of the timber<br>we work with</span></div>
+    <div><b>1 of 1</b><span>Every revived piece<br>is unique</span></div>
+    <div><b>Named</b><span>Every maker<br>credited by name</span></div>
+  </div>
+</div></section>
+
+<section class="reveal"><div class="wrap"><div class="story">
+  <p>The Chettiar mansions of Tamil Nadu were built from Burma teak and lit by brass. Many are gone now, taken down piece by piece, their timber sold by weight.</p>
+  <p><strong>We buy that timber and give it another hundred years.</strong> Not restored to look new &mdash; repaired honestly, the splits and losses bridged in brass so you can see exactly where the wood has been.</p>
+  <p>In time the same hands will work Welsh hardwood from our own woodland in Ceredigion &mdash; thinned, milled and seasoned there, then built here. Two countries, one workshop.</p>
+</div></div></section>
+
+<div class="wrap"><div class="rule"></div></div>
+
+<section class="reveal"><div class="wrap">
+  <div class="sec-h"><h2>Three lines, two countries</h2>
+  <p>One material language. Brass, honest joinery, and a named maker on every piece.</p></div>
+  <div class="grid">
+    <div class="card first"><div class="badge">First</div>
+      <div class="ico"><svg viewBox="0 0 100 100">
+        <path d="M22 34 H78 V72 H22 Z" fill="none" stroke="#B08A5A" stroke-width="4"/>
+        <path d="M34 34 V72 M50 34 V72 M66 34 V72" stroke="#8A5A3B" stroke-width="2.5"/>
+        <path d="M28 46 q10 6 0 12" fill="none" stroke="#C9A227" stroke-width="4" stroke-linecap="round"/>
+        <path d="M56 40 q8 10 0 20" fill="none" stroke="#C9A227" stroke-width="4" stroke-linecap="round"/>
+        <circle cx="72" cy="52" r="3.6" fill="#C9A227"/></svg></div>
+      <h3>Revived</h3><div class="sub">One of a kind</div>
+      <p>Salvaged Chettinad teak &mdash; pillars, doors and beams from dismantled mansions &mdash; rebuilt and repaired. Cracks are not hidden; they are filled with brass and made the point of the piece.</p>
+      <div class="when">Karaikudi &middot; from summer 2027</div></div>
+    <div class="card">
+      <div class="ico"><svg viewBox="0 0 100 100">
+        <g fill="#C9A227"><circle cx="34" cy="34" r="3.4"/><circle cx="50" cy="34" r="3.4"/><circle cx="66" cy="34" r="3.4"/>
+        <circle cx="34" cy="50" r="3.4"/><circle cx="50" cy="50" r="3.4"/><circle cx="66" cy="50" r="3.4"/>
+        <circle cx="34" cy="66" r="3.4"/><circle cx="50" cy="66" r="3.4"/><circle cx="66" cy="66" r="3.4"/></g>
+        <path d="M50 22 C64 30 70 40 70 50 C70 60 64 70 50 78 C36 70 30 60 30 50 C30 40 36 30 50 22Z" fill="none" stroke="#B08A5A" stroke-width="2.6"/></svg></div>
+      <h3>Kolam</h3><div class="sub">The capsule</div>
+      <p>Six new pieces in solid teak, made in Karaikudi. The courtyard column reduced to a profile, and a grid of brass dots drawn from the kolam.</p>
+      <div class="when">Karaikudi &middot; autumn 2027</div></div>
+    <div class="card">
+      <div class="ico"><svg viewBox="0 0 100 100">
+        <path d="M24 76 V30 H76 V76 h-13 V48 a13 13 0 0 0 -26 0 V76 Z" fill="none" stroke="#B08A5A" stroke-width="4"/>
+        <path d="M24 34 H76" stroke="#C9A227" stroke-width="4"/>
+        <rect x="20" y="76" width="12" height="5" rx="1.5" fill="#C9A227"/>
+        <rect x="68" y="76" width="12" height="5" rx="1.5" fill="#C9A227"/></svg></div>
+      <h3>Coedwig</h3><div class="sub">Edition One</div>
+      <p>Made in west Wales from our own woodland &mdash; thinned, milled and seasoned on thirteen acres in Ceredigion, then built by local joiners.</p>
+      <div class="when">Ceredigion &middot; 2028</div></div>
+  </div>
+</div></section>
+
+<div class="wrap"><div class="rule"></div></div>
+
+<section class="reveal"><div class="wrap">
+  <div class="sec-h"><h2>Every piece is signed</h2>
+  <p>An engraved brass plate on the underside. Not a logo &mdash; the facts.</p></div>
+  <div class="plate">
+    <span class="pl">Source:</span> Karaikudi, Tamil Nadu<br>
+    <span class="pl">Timber:</span> reclaimed Burma teak<br>
+    <span class="pl">Revived:</span> 2027<br>
+    <span class="pl">Maker:</span> named on every piece
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="social">
+    <a href="https://instagram.com/nirvanam_collective" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://instagram.com/nirvanam_studio" target="_blank" rel="noopener">Studio</a>
+    <a href="https://www.pinterest.com/nirvanam" target="_blank" rel="noopener">Pinterest</a>
+    <a href="https://youtube.com/@nirvanam_quests" target="_blank" rel="noopener">Film</a>
+  </div>
+  <div class="fnote">Nirvanam &middot; Ceredigion, Wales &amp; Karaikudi, Tamil Nadu<br>&copy; 2026 &middot; nirvanam.co.uk</div>
+</div></footer>
+</main>
+
+<div class="sticky">
+  <div class="in">
+    <div class="pitch" id="pitch">
+      <b>The first hundred get first refusal</b>
+      <span>Revived pieces are one of a kind. <span class="count" id="c">Places remaining: 100</span></span>
+    </div>
+    <form id="f">
+      <input type="email" id="e" placeholder="Your email address" required aria-label="Email address">
+      <button type="submit" id="b">Join the list</button>
+    </form>
+    <div class="seg" id="seg">
+      <div class="q">One more thing — what draws you?</div>
+      <div class="chips">
+        <button class="chip" data-s="revived" type="button">One-of-a-kind revived pieces</button>
+        <button class="chip" data-s="kolam" type="button">The new Kolam capsule</button>
+        <button class="chip" data-s="coedwig" type="button">Welsh-made Coedwig</button>
+        <button class="chip" data-s="story" type="button">Just the story</button>
+      </div>
+    </div>
+    <div class="done" id="d">Thank you — you are on the list.<small id="dsub">We will write when the first pieces land.</small></div>
+  </div>
+</div>
+
+<script>
+(function(){
+"use strict";
+
+/* ============================================================
+   MESSAGING VARIANTS — for audience testing
+   Send traffic with ?v=heritage or ?v=craft to test messaging.
+   Default (no param) = design-led.
+   Track which converts best in your analytics.
+   ============================================================ */
+var VARIANTS = {
+  design: {
+    ey: "Coming 2027 · Karaikudi",
+    h1: 'Furniture with a <em>name</em> attached',
+    ld: "Hundred-year-old Chettinad teak, rescued from the mansions of Tamil Nadu and repaired in brass. Every piece carries the name of the hand that made it."
+  },
+  heritage: {
+    ey: "Coming 2027 · Chettinad",
+    h1: 'The mansions are gone.<br>The <em>teak</em> remains.',
+    ld: "We rescue Burma teak from the Chettiar houses of Tamil Nadu and give it another hundred years — repaired in brass, signed by the craftsman who worked it."
+  },
+  craft: {
+    ey: "Coming 2027 · Karaikudi",
+    h1: 'Every crack filled with <em>brass</em>',
+    ld: "Hundred-year-old Chettinad teak, repaired honestly. We do not hide the damage — we bridge it in brass, so you can see exactly where the wood has been."
+  }
+};
+function param(k){
+  var m = new RegExp("[?&]"+k+"=([^&#]*)").exec(window.location.search);
+  return m ? decodeURIComponent(m[1]) : null;
+}
+var vKey = param("v");
+var V = VARIANTS[vKey] || VARIANTS.design;
+document.getElementById("ey").textContent = V.ey;
+document.getElementById("h1").innerHTML  = V.h1;
+document.getElementById("ld").textContent = V.ld;
+var variantName = VARIANTS[vKey] ? vKey : "design";
+
+/* source tracking — utm_source, or referrer */
+var source = param("utm_source") || param("src") || (document.referrer ? "ref" : "direct");
+
+/* ============================================================
+   ANALYTICS HOOK
+   Fires on signup. Wire to GA4, Plausible, Fathom or your own.
+   ============================================================ */
+function track(event, data){
+  data = data || {};
+  data.variant = variantName;
+  data.source  = source;
+  if (window.gtag)      window.gtag("event", event, data);
+  if (window.plausible) window.plausible(event, {props:data});
+  if (window.fathom)    window.fathom.trackEvent(event);
+  /* console for testing — remove in production */
+  if (window.console) console.log("[nirvanam]", event, data);
+}
+track("page_view");
+
+/* ============================================================
+   SIGNUP — two step, with segment capture
+   ============================================================ */
+var f=document.getElementById("f"), e=document.getElementById("e"),
+    seg=document.getElementById("seg"), d=document.getElementById("d"),
+    dsub=document.getElementById("dsub"), pitch=document.getElementById("pitch"),
+    c=document.getElementById("c");
+
+var REMAINING = 100;                       /* set to the real number */
+c.textContent = "Places remaining: " + REMAINING;
+
+var capturedEmail = null;
+
+f.addEventListener("submit", function(ev){
+  ev.preventDefault();
+  if(!e.value || e.value.indexOf("@") < 1) return;
+  capturedEmail = e.value;
+
+  /* --------------------------------------------------------
+     CONNECT YOUR LIST HERE.
+     Replace with Klaviyo / Mailchimp / Shopify.
+     Send: capturedEmail, variantName, source, and later segment.
+     Until connected this stores NOTHING.
+     -------------------------------------------------------- */
+  track("email_captured", {email_domain: capturedEmail.split("@")[1]});
+
+  f.style.display = "none";
+  pitch.querySelector("b").textContent = "You're in — one quick question";
+  pitch.querySelector("span").style.display = "none";
+  seg.classList.add("on");
+});
+
+Array.prototype.forEach.call(document.querySelectorAll(".chip"), function(chip){
+  chip.addEventListener("click", function(){
+    var s = chip.getAttribute("data-s");
+    Array.prototype.forEach.call(document.querySelectorAll(".chip"), function(x){
+      x.classList.remove("on");
+    });
+    chip.classList.add("on");
+
+    /* SEND SEGMENT TO YOUR LIST HERE — tag the subscriber */
+    track("segment_selected", {segment: s});
+
+    var msgs = {
+      revived: "We will write the moment the first revived pieces land.",
+      kolam:   "We will show you the Kolam capsule first.",
+      coedwig: "We will let you know when the Welsh timber is ready.",
+      story:   "We will send the films, not the sales."
+    };
+    setTimeout(function(){
+      seg.classList.remove("on");
+      pitch.style.display = "none";
+      dsub.textContent = msgs[s] || msgs.story;
+      d.classList.add("on");
+    }, 340);
+  });
+});
+
+/* scroll reveal */
+if ("IntersectionObserver" in window){
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add("in"); io.unobserve(en.target); } });
+  }, {threshold:0.12});
+  Array.prototype.forEach.call(document.querySelectorAll(".reveal"), function(el){ io.observe(el); });
+} else {
+  Array.prototype.forEach.call(document.querySelectorAll(".reveal"), function(el){ el.classList.add("in"); });
+}
+
+/* scroll depth, to see whether the story is being read */
+var fired={};
+window.addEventListener("scroll", function(){
+  var pct = (window.scrollY + window.innerHeight) / document.body.scrollHeight;
+  [0.5, 0.9].forEach(function(m){
+    if(pct >= m && !fired[m]){ fired[m]=true; track("scroll_"+Math.round(m*100)); }
+  });
+}, {passive:true});
+})();
+</script>
+</body>
+</html>
