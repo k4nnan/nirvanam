@@ -26,6 +26,12 @@
               UK and EU shoppers must see prices that include VAT.
               Leave out any currency you do not want to show. Leave out price entirely
               to show "Price confirmed when ready".
+  material    name the wood here, as specifically as you can stand behind:
+              "Burma teak", "Rosewood", "Satinwood". If you are not sure, say so:
+              "Tropical hardwood, probably teak". A wrongly named wood is a
+              misdescription buyers can claim a refund for.
+              Rosewood (Dalbergia) is CITES-listed and may need an export permit:
+              check with the forwarder before you list a rosewood piece.
   Everything else is optional: leave out any line you do not have yet.
 
   THE LIST STARTS EMPTY, so the page shows "The first pieces are being chosen now".
