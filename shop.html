@@ -1,0 +1,655 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Chettinad Collection | Nirvanam Studio</title>
+<meta name="description" content="Heritage furniture from the merchant mansions of Chettinad, chosen by hand in Karaikudi and shipped to the UK, Europe and the USA. 10% of the profit on every piece plants trees.">
+<meta property="og:title" content="The Chettinad Collection | Nirvanam Studio">
+<meta property="og:description" content="Heritage furniture chosen by hand in Karaikudi. Register your interest in a piece. Every piece plants trees.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nirvanamstudio.com/shop.html">
+<link rel="canonical" href="https://nirvanamstudio.com/shop.html">
+<meta name="theme-color" content="#E4EFCD">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  /* ---- Brand tokens: the same values as index.html ---- */
+  :root {
+    --bg: #E4EFCD;        /* plaster */
+    --surface: #FFFFFF;
+    --ink: #2B1F18;       /* teak */
+    --muted: #685C51;     /* bark */
+    --line: #BBC9A0;
+    --accent: #1F4B3D;    /* Athangudi tile green */
+    --accent-soft: #D2E2B8;
+    --accent-ink: #ffffff;
+    --ochre: #B48A1E;     /* brass */
+    --danger: #9B2C1A;
+    --radius: 3px;
+    --display: 'Libre Caslon Display','Libre Caslon Text',Georgia,serif;
+    --body: 'Libre Caslon Text',Georgia,'Times New Roman',serif;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 17px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  img { max-width: 100%; display: block; }
+  a { color: var(--accent); }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+  [hidden] { display: none !important; }
+
+  /* Header */
+  .site-header { border-bottom: 1px solid var(--line); background: var(--surface); }
+  .site-header .wrap { display: flex; align-items: center; justify-content: space-between; min-height: 60px; gap: 16px; }
+  .brand { font-family: var(--display); font-size: 1.5rem; font-weight: 400; letter-spacing: .02em; color: var(--ink); text-decoration: none; }
+  .site-nav a { color: var(--ink); text-decoration: none; font-size: .95rem; }
+
+  /* Tabs */
+  .tabs-bar { background: var(--surface); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 5; }
+  .tabs { display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; }
+  .tabs::-webkit-scrollbar { display: none; }
+  .tab { font: inherit; font-size: .95rem; font-weight: 600; background: none; border: 0; border-bottom: 3px solid transparent; color: var(--muted); padding: 14px 12px 11px; cursor: pointer; white-space: nowrap; }
+  .tab[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--ochre); }
+  .tab .leaf { color: var(--accent); }
+  @media (max-width: 480px) { .tab { font-size: .88rem; padding: 13px 8px 10px; } .tab .long { display: none; } }
+
+  /* Shared type */
+  .intro { padding: 40px 0 18px; }
+  .eyebrow { text-transform: uppercase; letter-spacing: .16em; font-size: .75rem; color: var(--ochre); font-weight: 600; margin: 0 0 8px; }
+  h1 { font-family: var(--display); font-weight: 400; font-size: clamp(2.1rem, 6vw, 3.4rem); line-height: 1.05; margin: 0 0 14px; }
+  h2.section { font-family: var(--display); font-weight: 400; font-size: clamp(1.7rem, 4.5vw, 2.3rem); line-height: 1.1; margin: 0 0 10px; }
+  .lede { max-width: 64ch; color: var(--muted); margin: 0 0 10px; font-size: 1.05rem; }
+  .steps { list-style: none; padding: 0; margin: 26px 0 0; display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); counter-reset: s; }
+  .steps li { counter-increment: s; border-top: 2px solid var(--ink); padding-top: 10px; font-size: .95rem; color: var(--muted); }
+  .steps li strong { display: block; color: var(--ink); }
+  .steps li::before { content: "0" counter(s); font-family: var(--display); font-size: 1.3rem; color: var(--ochre); display: block; }
+
+  /* Tree banner on the collection */
+  .tree-banner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px 16px; margin: 26px 0 0; padding: 12px 16px; background: var(--accent-soft); border-radius: var(--radius); color: var(--accent); font-weight: 600; font-size: .95rem; }
+  .tree-banner button { font: inherit; background: none; border: 0; padding: 0; color: var(--accent); text-decoration: underline; cursor: pointer; }
+
+  /* Filters */
+  .filters { display: flex; flex-wrap: wrap; gap: 8px; padding: 22px 0 6px; }
+  .chip { font: inherit; font-size: .9rem; border: 1px solid var(--line); background: var(--surface); color: var(--ink); padding: 7px 14px; border-radius: 999px; cursor: pointer; }
+  .chip[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: #fff; }
+  .count { color: var(--muted); font-size: .9rem; margin: 6px 0 0; }
+
+  /* Grid */
+  .grid { display: grid; gap: 22px; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); padding: 18px 0 56px; }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; scroll-margin-top: 64px; }
+  .card.is-linked { outline: 2px solid var(--ochre); outline-offset: 2px; }
+  .photo { position: relative; aspect-ratio: 4 / 5; background: #D6E2BD; }
+  .photo img { width: 100%; height: 100%; object-fit: cover; }
+  .photo .ph { position: absolute; inset: 0; display: grid; place-items: center; color: #7d8a63; font-family: var(--display); font-size: 1.1rem; text-align: center; padding: 16px;
+    background: repeating-linear-gradient(45deg, #D6E2BD 0 14px, #CFDCB3 14px 28px); }
+  .status { position: absolute; left: 10px; top: 10px; background: var(--surface); color: var(--ink); font-size: .74rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; padding: 4px 9px; border-radius: 3px; }
+  .status[data-s="ready"] { background: var(--accent); color: #fff; }
+  .status[data-s="reserved"] { background: var(--ink); color: #fff; }
+  .thumbs { display: flex; gap: 6px; padding: 8px 10px 0; overflow-x: auto; }
+  .thumbs button { flex: 0 0 52px; height: 52px; padding: 0; border: 1px solid var(--line); border-radius: 4px; overflow: hidden; background: none; cursor: pointer; }
+  .thumbs button[aria-current="true"] { border-color: var(--ink); }
+  .thumbs img { width: 100%; height: 100%; object-fit: cover; }
+  .body { padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+  .cat { text-transform: uppercase; letter-spacing: .12em; font-size: .7rem; color: var(--muted); margin: 0; }
+  .card h2 { font-family: var(--display); font-size: 1.55rem; line-height: 1.15; margin: 0; font-weight: 400; }
+  .desc { margin: 0; color: var(--muted); font-size: .95rem; }
+  .specs { margin: 4px 0 0; padding: 0; display: grid; grid-template-columns: auto 1fr; gap: 3px 12px; font-size: .88rem; }
+  .specs dt { color: var(--muted); }
+  .specs dd { margin: 0; }
+  .price { margin: 8px 0 0; padding-top: 10px; border-top: 1px solid var(--line); }
+  .price .main { font-family: var(--display); font-size: 1.6rem; font-weight: 400; line-height: 1.1; }
+  .price .main small { font-family: var(--body); font-size: .8rem; font-weight: 400; color: var(--muted); margin-left: 6px; }
+  .price .alt { font-size: .85rem; color: var(--muted); margin-top: 2px; }
+  .price .note { font-size: .78rem; color: var(--muted); margin-top: 4px; }
+  .price.tbc { font-size: .9rem; color: var(--muted); }
+  .btn { font: inherit; font-weight: 600; border: 0; background: var(--accent); color: var(--accent-ink); padding: 12px 16px; border-radius: var(--radius); cursor: pointer; width: 100%; margin-top: auto; }
+  .btn:hover { filter: brightness(1.08); }
+  .btn[disabled] { opacity: .55; cursor: not-allowed; }
+  .btn.ghost { background: none; color: var(--ink); border: 1px solid var(--line); }
+  .share { font-size: .82rem; color: var(--muted); background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline; align-self: flex-start; }
+  .empty { padding: 40px 0 70px; color: var(--muted); }
+  .soon-box { margin: 30px 0 64px; padding: 30px 24px; background: var(--surface); border: 1px solid var(--line); border-top: 2px solid var(--ochre); border-radius: var(--radius); }
+  .linkbtn { display: inline-block; width: auto; text-decoration: none; margin-top: 8px; }
+
+  /* Regeneration tab */
+  .pledges { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); margin: 26px 0 0; }
+  .pledge { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px; }
+  .pledge .big { font-family: var(--display); font-size: 2rem; font-weight: 400; line-height: 1; color: var(--accent); }
+  .pledge p { margin: 6px 0 0; color: var(--muted); font-size: .93rem; }
+  .pledge strong { color: var(--ink); }
+  .tracker { margin: 34px 0 0; padding: 22px 18px; background: var(--accent); color: #fff; border-radius: var(--radius); }
+  .tracker h3 { margin: 0 0 14px; font-size: .78rem; text-transform: uppercase; letter-spacing: .14em; opacity: .85; font-weight: 600; }
+  .stats { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+  .stat .n { font-family: var(--display); font-size: 2.6rem; font-weight: 400; line-height: 1; }
+  .stat .l { font-size: .88rem; opacity: .85; }
+  .tracker .upd { margin: 14px 0 0; font-size: .8rem; opacity: .75; }
+  .tracker .soon { margin: 0; font-size: 1.05rem; }
+  .lands { display: grid; gap: 22px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); margin: 40px 0 0; }
+  .land { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; }
+  .land figure { margin: 0; }
+  .land figure img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; background: #dfe6dc; }
+  .land figcaption { font-size: .72rem; color: var(--muted); padding: 6px 16px 0; }
+  .land .body h3 { font-family: var(--display); font-size: 1.6rem; line-height: 1.15; margin: 0; font-weight: 400; }
+  .land .body p { margin: 0; color: var(--muted); font-size: .95rem; }
+  .land ul { margin: 4px 0 0; padding-left: 18px; font-size: .93rem; }
+  .land li { margin: 3px 0; }
+  .honest { margin: 44px 0 0; display: grid; gap: 22px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+  .honest .col h3 { font-size: .78rem; text-transform: uppercase; letter-spacing: .14em; color: var(--ochre); margin: 0 0 8px; }
+  .honest ul { margin: 0; padding: 0; list-style: none; }
+  .honest li { padding: 10px 0; border-top: 1px solid var(--line); font-size: .95rem; color: var(--muted); }
+  .honest li strong { display: block; color: var(--ink); }
+  .regen-cta { margin: 44px 0 64px; text-align: center; }
+  .regen-cta .btn { width: auto; display: inline-block; padding: 12px 22px; }
+
+  /* Dialog */
+  dialog { border: 0; border-radius: 10px; padding: 0; width: min(480px, calc(100vw - 24px)); background: var(--surface); color: var(--ink); }
+  dialog::backdrop { background: rgba(42, 33, 26, .55); }
+  .dlg { padding: 22px 20px 20px; }
+  .dlg h3 { font-family: var(--display); font-size: 1.7rem; margin: 0 0 2px; line-height: 1.15; }
+  .dlg .for { color: var(--muted); margin: 0 0 14px; font-size: .95rem; }
+  .field { margin-bottom: 12px; }
+  .field label { display: block; font-size: .85rem; font-weight: 600; margin-bottom: 4px; }
+  .field input, .field select, .field textarea { width: 100%; font: inherit; font-size: 16px; padding: 10px 11px; border: 1.5px solid #9C9186; border-radius: var(--radius); background: #fff; color: var(--ink); }
+  .field textarea { min-height: 70px; resize: vertical; }
+  .consent { display: flex; gap: 9px; align-items: flex-start; font-size: .84rem; color: var(--muted); margin: 4px 0 14px; }
+  .consent input { margin-top: 3px; width: 18px; height: 18px; flex: 0 0 auto; }
+  .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+  .row { display: flex; gap: 10px; }
+  .row .btn { margin-top: 0; }
+  .msg { font-size: .9rem; margin: 0 0 12px; padding: 9px 11px; border-radius: var(--radius); }
+  .msg.err { background: #f6e3de; color: var(--danger); }
+  .done { text-align: center; padding: 10px 0 4px; }
+  .done p { color: var(--muted); }
+
+  footer { border-top: 1px solid var(--line); padding: 30px 0 44px; color: var(--muted); font-size: 15px; }
+  footer .wrap { display: flex; flex-wrap: wrap; gap: 10px 32px; justify-content: space-between; }
+  footer p { margin: 0; }
+  :focus-visible { outline: 2px solid var(--ochre); outline-offset: 2px; }
+</style>
+</head>
+<body>
+
+<div id="site-menu"></div>
+<script src="site-menu.js"></script>
+
+<div class="tabs-bar">
+  <div class="wrap tabs" role="tablist" aria-label="Shop sections">
+    <button class="tab" role="tab" id="tab-collection" aria-controls="panel-collection" aria-selected="true"><span class="long">The Chettinad </span>Collection</button>
+    <button class="tab" role="tab" id="tab-regeneration" aria-controls="panel-regeneration" aria-selected="false" tabindex="-1"><span class="leaf" aria-hidden="true">&#10047;</span> Every piece plants trees</button>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <!-- ===================== TAB 1: THE COLLECTION ===================== -->
+  <section id="panel-collection" role="tabpanel" aria-labelledby="tab-collection">
+    <div class="intro">
+      <p class="eyebrow">Chosen by hand in Karaikudi, Tamil Nadu</p>
+      <h1>The Chettinad Collection</h1>
+      <p class="lede">Teak almirahs, carved doors, planter's chairs, and the brass and enamel that filled the merchant mansions of Chettinad. Every piece is chosen in person, cleaned and crated in Karaikudi, and shipped to your door in the UK, Europe or the USA.</p>
+      <p class="lede">Nothing is sold before it is ready. Register your interest in a piece and you hear first, with the final price and delivery date.</p>
+      <ol class="steps">
+        <li><strong>Register interest</strong>Choose a piece and leave your email. No payment, no obligation.</li>
+        <li><strong>We prepare it</strong>Cleaning, export paperwork and a made-to-measure crate.</li>
+        <li><strong>You hear first</strong>A delivered price for your country, before the piece goes on general sale.</li>
+      </ol>
+      <p class="tree-banner">
+        <span><span id="share-a">10</span>% of the profit on every piece plants trees.</span>
+        <button type="button" data-goto="regeneration">See where they grow</button>
+      </p>
+    </div>
+
+    <div class="filters" id="filters" role="group" aria-label="Filter by category"></div>
+    <p class="count" id="count" aria-live="polite"></p>
+    <div class="grid" id="grid"></div>
+    <p class="empty" id="empty" hidden>No pieces in this category yet. New finds are added most weeks.</p>
+    <div class="soon-box" id="soon-box" hidden>
+      <h2 class="section">The first pieces are being chosen now</h2>
+      <p class="lede">We are in Karaikudi, going through the yards and warehouses piece by piece. Photographs, sizes and prices appear here as each one is ready.</p>
+      <p><a class="btn linkbtn" href="index.html#join">Join the list for first refusal</a></p>
+    </div>
+  </section>
+
+  <!-- ===================== TAB 2: REGENERATION ===================== -->
+  <section id="panel-regeneration" role="tabpanel" aria-labelledby="tab-regeneration" hidden>
+    <div class="intro">
+      <p class="eyebrow">Old furniture, new trees</p>
+      <h1>Every piece plants trees</h1>
+      <p class="lede">Nirvanam Studio is the shop for a longer project: bringing two pieces of land back to life, a small woodland in West Wales and a coconut grove in South India. <span id="share-b">10</span>% of the profit on every piece we sell pays for planting and caring for trees on that land.</p>
+      <p class="lede">The furniture is part of the same idea. Every piece already exists. Giving it a second life means no new tree is felled to make it.</p>
+
+      <div class="pledges">
+        <div class="pledge"><div class="big"><span id="share-c">10</span>%</div><p><strong>of profit, every piece.</strong> Built into our prices, not added on at the till.</p></div>
+        <div class="pledge"><div class="big">2</div><p><strong>places we plant.</strong> West Wales and South India. Ask us which one your piece funded.</p></div>
+        <div class="pledge"><div class="big">0</div><p><strong>new trees cut</strong> to make what we sell. It is all reclaimed, restored and reused.</p></div>
+      </div>
+
+      <div class="tracker" aria-live="polite">
+        <h3>The counter</h3>
+        <div class="stats" id="stats" hidden>
+          <div class="stat"><div class="n" id="n-pieces">0</div><div class="l">pieces found a new home</div></div>
+          <div class="stat"><div class="n" id="n-wales">0</div><div class="l">trees planted in Wales</div></div>
+          <div class="stat"><div class="n" id="n-india">0</div><div class="l">trees planted in South India</div></div>
+        </div>
+        <p class="soon" id="soon">The counter goes live with our first shipment. We only count trees once they are in the ground.</p>
+        <p class="upd" id="upd"></p>
+      </div>
+    </div>
+
+    <div class="lands">
+      <article class="land">
+        <figure>
+          <img src="shop/images/land-wales.jpg" alt="Aerial view of the Nirvanam woodland in West Wales: dense rows of trees cut by two straight rides, with older woodland along the edges and a field to the north" loading="lazy" width="720" height="1125">
+          <figcaption>Our woodland in West Wales from above. Satellite imagery &copy; Google.</figcaption>
+        </figure>
+        <div class="body">
+          <p class="cat">West Wales</p>
+          <h3>A woodland to open up</h3>
+          <p>Dense, evenly planted rows with older broadleaf woodland on the edges. Planted that close, little light reaches the ground and little else can grow. Over the next ten years we are giving it room.</p>
+          <ul>
+            <li>Native oak, birch, rowan, hazel and hawthorn planted in clearings and along the rides</li>
+            <li>A new hedgerow along the field edge</li>
+            <li>Ponds dug for wildlife</li>
+            <li>Timber we thin made into furniture in our own workshop on the land</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="land">
+        <figure>
+          <img src="shop/images/land-india.jpg" alt="Aerial view of the Nirvanam land in South India: a grove of coconut palms in rows, with an open stretch of bare grazed ground to the north" loading="lazy" width="730" height="900">
+          <figcaption>Our land in South India from above. Satellite imagery &copy; Google.</figcaption>
+        </figure>
+        <div class="body">
+          <p class="cat">South India</p>
+          <h3>From coconut rows to food forest</h3>
+          <p>A coconut grove beside an open stretch of bare, grazed ground. Palms on their own give thin shade and tired soil. We are layering it into a food forest where many kinds of tree grow together.</p>
+          <ul>
+            <li>Native neem, tamarind and pongamia replanting the open ground</li>
+            <li>Jackfruit, mango and shade trees between the palms</li>
+            <li>Mulch and ground cover to rebuild the soil and hold the monsoon rain</li>
+            <li>Rainwater kept on the land, not run off it</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+
+    <div class="honest">
+      <div class="col">
+        <h2 class="section">Honest about carbon</h2>
+        <p class="lede">Moving furniture across an ocean has a carbon cost, and we do not claim to be carbon neutral yet. This is what we do today, and what we are working towards.</p>
+      </div>
+      <div class="col">
+        <h3>What we do now</h3>
+        <ul>
+          <li><strong>Reuse before anything new</strong>Every piece already exists. Keeping it in use saves the timber, the making and the waste.</li>
+          <li><strong>Sea, never air</strong>Pieces travel by ship, a small fraction of the emissions of air freight for the same weight.</li>
+          <li><strong>Full containers</strong>We ship together, so each piece carries a smaller share of the journey.</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h3>What we are working towards</h3>
+        <ul>
+          <li><strong>Measure every shipment</strong>The emissions of each journey, from Karaikudi to your door.</li>
+          <li><strong>Plant more than we emit</strong>Enough trees on our own land to cover those emissions, then more.</li>
+          <li><strong>Publish the numbers</strong>Here, once a year, including where we fall short.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="regen-cta">
+      <button type="button" class="btn" data-goto="collection">Browse the collection</button>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Prices are indicative until confirmed by email. We use your details only to contact you about the pieces you choose.</p>
+    <p>&copy; <span id="yr"></span> Nirvanam, Ceredigion and Chettinad. <a href="privacy.html">Privacy</a></p>
+  </div>
+</footer>
+
+<!-- Register-interest dialog -->
+<dialog id="dlg" aria-labelledby="dlg-title">
+  <div class="dlg">
+    <form id="form" novalidate>
+      <h3 id="dlg-title">Register interest</h3>
+      <p class="for" id="dlg-for"></p>
+      <p class="msg err" id="err" hidden role="alert"></p>
+      <div class="field">
+        <label for="f-name">Name</label>
+        <input id="f-name" name="name" autocomplete="name" required maxlength="100">
+      </div>
+      <div class="field">
+        <label for="f-email">Email</label>
+        <input id="f-email" name="email" type="email" autocomplete="email" inputmode="email" required maxlength="200">
+      </div>
+      <div class="field">
+        <label for="f-country">Deliver to</label>
+        <select id="f-country" name="country" required>
+          <option value="">Choose a country</option>
+          <option>United Kingdom</option>
+          <option>United States</option>
+          <option>Ireland</option>
+          <option>France</option>
+          <option>Germany</option>
+          <option>Netherlands</option>
+          <option>Spain</option>
+          <option>Italy</option>
+          <option>Other Europe</option>
+          <option>India</option>
+          <option>Elsewhere</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="f-note">Anything we should know? <span style="font-weight:400;color:var(--muted)">(optional)</span></label>
+        <textarea id="f-note" name="note" maxlength="600"></textarea>
+      </div>
+      <div class="hp" aria-hidden="true">
+        <label for="f-website">Leave this empty</label>
+        <input id="f-website" name="website" tabindex="-1" autocomplete="off">
+      </div>
+      <label class="consent">
+        <input type="checkbox" id="f-consent" name="consent" value="yes" required>
+        <span>Email me about this piece when it is ready to ship. I can ask to be removed at any time.</span>
+      </label>
+      <div class="row">
+        <button type="button" class="btn ghost" id="cancel">Cancel</button>
+        <button type="submit" class="btn" id="submit">Register interest</button>
+      </div>
+    </form>
+    <div class="done" id="done" hidden>
+      <h3>You are on the list</h3>
+      <p id="done-text"></p>
+      <button type="button" class="btn" id="close">Back to the collection</button>
+    </div>
+  </div>
+</dialog>
+
+<script src="shop-items.js"></script>
+<script>
+(function () {
+  "use strict";
+
+  /* ============ CONFIG: the only two lines you need to edit here ============ */
+  var SHEET_ENDPOINT = "PASTE_YOUR_APPS_SCRIPT_WEB_APP_URL_HERE";   // ends in /exec
+  var CONTACT_EMAIL  = "hello@nirvanamstudio.com";                  // shown if the form cannot send
+  /* ========================================================================== */
+
+  var STATUS = { sourcing: "Just found", restoring: "Being prepared", ready: "Ready to ship", reserved: "Reserved" };
+  var CURRENCY = [
+    { key: "gbp", sym: "£", where: "to the UK" },
+    { key: "eur", sym: "€", where: "to the EU" },
+    { key: "usd", sym: "$", where: "to the USA" }
+  ];
+
+  var items = Array.isArray(window.NIRVANAM_ITEMS) ? window.NIRVANAM_ITEMS : [];
+  var impact = window.NIRVANAM_IMPACT || {};
+  var $ = function (id) { return document.getElementById(id); };
+  var grid = $("grid"), filters = $("filters"), countEl = $("count"), emptyEl = $("empty");
+  var dlg = $("dlg"), form = $("form"), errEl = $("err"), doneEl = $("done"), submitBtn = $("submit");
+  var current = null, activeCat = "All";
+
+  $("yr").textContent = new Date().getFullYear();
+
+  /* Remember where the visitor came from so each lead is attributed in the Sheet. */
+  var utm = (function () {
+    var out = {}, keys = ["utm_source", "utm_medium", "utm_campaign", "utm_content"];
+    var q = new URLSearchParams(location.search);
+    keys.forEach(function (k) { if (q.get(k)) out[k] = q.get(k).slice(0, 80); });
+    try {
+      if (Object.keys(out).length) sessionStorage.setItem("nv_utm", JSON.stringify(out));
+      else out = JSON.parse(sessionStorage.getItem("nv_utm") || "{}");
+    } catch (e) {}
+    return out;
+  })();
+
+  function el(tag, attrs, children) {
+    var n = document.createElement(tag);
+    Object.keys(attrs || {}).forEach(function (k) {
+      if (k === "text") n.textContent = attrs[k];
+      else if (k === "class") n.className = attrs[k];
+      else n.setAttribute(k, attrs[k]);
+    });
+    (children || []).forEach(function (c) { if (c) n.appendChild(typeof c === "string" ? document.createTextNode(c) : c); });
+    return n;
+  }
+  function num(v) { var n = Number(v); return isFinite(n) && n > 0 ? n : 0; }
+  function fmt(n) { return Math.round(n).toLocaleString("en-GB"); }
+
+  /* ---------------- Tabs ---------------- */
+  var tabs = { collection: $("tab-collection"), regeneration: $("tab-regeneration") };
+  var panels = { collection: $("panel-collection"), regeneration: $("panel-regeneration") };
+  function showTab(name, opts) {
+    opts = opts || {};
+    Object.keys(tabs).forEach(function (k) {
+      var on = k === name;
+      tabs[k].setAttribute("aria-selected", on ? "true" : "false");
+      tabs[k].tabIndex = on ? 0 : -1;
+      panels[k].hidden = !on;
+    });
+    if (opts.updateUrl) {
+      var h = name === "regeneration" ? "#regeneration" : "";
+      history.replaceState(null, "", location.pathname + location.search + h);
+    }
+    if (opts.scroll) window.scrollTo({ top: 0, behavior: "smooth" });
+    if (opts.focus) tabs[name].focus();
+  }
+  Object.keys(tabs).forEach(function (k) {
+    tabs[k].addEventListener("click", function () { showTab(k, { updateUrl: true }); });
+    tabs[k].addEventListener("keydown", function (e) {
+      if (e.key !== "ArrowRight" && e.key !== "ArrowLeft") return;
+      showTab(k === "collection" ? "regeneration" : "collection", { updateUrl: true, focus: true });
+    });
+  });
+  document.querySelectorAll("[data-goto]").forEach(function (b) {
+    b.addEventListener("click", function () { showTab(b.getAttribute("data-goto"), { updateUrl: true, scroll: true }); });
+  });
+
+  /* ---------------- Regeneration numbers ---------------- */
+  (function () {
+    var share = num(impact.profitShare) || 10;
+    ["share-a", "share-b", "share-c"].forEach(function (id) { $(id).textContent = share; });
+    var p = num(impact.piecesSold), w = num(impact.treesWales), i = num(impact.treesIndia);
+    if (p || w || i) {
+      $("n-pieces").textContent = fmt(p);
+      $("n-wales").textContent = fmt(w);
+      $("n-india").textContent = fmt(i);
+      $("stats").hidden = false;
+      $("soon").hidden = true;
+      if (impact.updated) $("upd").textContent = "Last updated " + impact.updated + ".";
+    }
+  })();
+
+  /* ---------------- Collection ---------------- */
+  function buildPrice(item) {
+    var p = item.price || {};
+    var have = CURRENCY.filter(function (c) { return num(p[c.key]); });
+    if (!have.length) return el("p", { class: "price tbc", text: "Price confirmed when the piece is ready." });
+    var first = have[0];
+    var box = el("div", { class: "price" }, [
+      el("div", { class: "main" }, [first.sym + fmt(p[first.key]), el("small", { text: "delivered " + first.where })])
+    ]);
+    if (have.length > 1) {
+      box.appendChild(el("div", { class: "alt", text: have.slice(1).map(function (c) { return c.sym + fmt(p[c.key]) + " " + c.where; }).join("  ·  ") }));
+    }
+    box.appendChild(el("div", { class: "note", text: item.priceNote || "Indicative, including taxes. Final price confirmed by email." }));
+    return box;
+  }
+
+  function buildCard(item) {
+    var photos = Array.isArray(item.photos) ? item.photos.filter(Boolean) : [];
+    var photo = el("div", { class: "photo" });
+    var img = null;
+    function placeholder() {
+      photo.querySelectorAll("img").forEach(function (x) { x.remove(); });
+      if (!photo.querySelector(".ph")) photo.insertBefore(el("div", { class: "ph", text: "Photos coming soon" }), photo.firstChild);
+    }
+    if (photos.length) {
+      img = el("img", { src: photos[0], alt: item.title + ", photo 1", loading: "lazy", decoding: "async" });
+      img.addEventListener("error", placeholder);
+      photo.appendChild(img);
+    } else {
+      placeholder();
+    }
+    var s = STATUS[item.status] ? item.status : "sourcing";
+    photo.appendChild(el("span", { class: "status", "data-s": s, text: STATUS[s] }));
+
+    var thumbs = null;
+    if (photos.length > 1) {
+      thumbs = el("div", { class: "thumbs" });
+      photos.forEach(function (src, i) {
+        var b = el("button", { type: "button", "aria-label": "Show photo " + (i + 1), "aria-current": i === 0 ? "true" : "false" },
+          [el("img", { src: src, alt: "", loading: "lazy" })]);
+        b.addEventListener("click", function () {
+          if (!img) return;
+          img.src = src; img.alt = item.title + ", photo " + (i + 1);
+          thumbs.querySelectorAll("button").forEach(function (x) { x.setAttribute("aria-current", "false"); });
+          b.setAttribute("aria-current", "true");
+        });
+        thumbs.appendChild(b);
+      });
+    }
+
+    var specs = el("dl", { class: "specs" });
+    [["Period", item.period], ["Material", item.material], ["Size", item.dimensions], ["Condition", item.condition]]
+      .forEach(function (p) { if (p[1]) { specs.appendChild(el("dt", { text: p[0] })); specs.appendChild(el("dd", { text: p[1] })); } });
+
+    var reserved = item.status === "reserved";
+    var btn = el("button", { type: "button", class: "btn", text: reserved ? "Join the waiting list" : "Register interest" });
+    btn.addEventListener("click", function () { openDialog(item); });
+
+    var share = el("button", { type: "button", class: "share", text: "Copy link to this piece" });
+    share.addEventListener("click", function () {
+      var url = location.origin + location.pathname + "#" + item.id;
+      (navigator.clipboard ? navigator.clipboard.writeText(url) : Promise.reject())
+        .then(function () { share.textContent = "Link copied"; })
+        .catch(function () { location.hash = item.id; share.textContent = "Link is in the address bar"; });
+    });
+
+    return el("article", { class: "card", id: item.id }, [
+      photo, thumbs,
+      el("div", { class: "body" }, [
+        el("p", { class: "cat", text: item.category || "Other" }),
+        el("h2", { text: item.title }),
+        item.description ? el("p", { class: "desc", text: item.description }) : null,
+        specs.children.length ? specs : null,
+        buildPrice(item), share, btn
+      ])
+    ]);
+  }
+
+  function render() {
+    grid.textContent = "";
+    var shown = items.filter(function (i) { return activeCat === "All" || (i.category || "Other") === activeCat; });
+    shown.forEach(function (i) { grid.appendChild(buildCard(i)); });
+    var none = items.length === 0;
+    $("soon-box").hidden = !none;
+    emptyEl.hidden = none || shown.length > 0;
+    countEl.hidden = none;
+    countEl.textContent = shown.length + (shown.length === 1 ? " piece" : " pieces");
+  }
+
+  function renderFilters() {
+    var cats = ["All"];
+    items.forEach(function (i) { var c = i.category || "Other"; if (cats.indexOf(c) < 0) cats.push(c); });
+    if (cats.length < 3) { filters.hidden = true; return; }
+    cats.forEach(function (c) {
+      var b = el("button", { type: "button", class: "chip", "aria-pressed": c === activeCat ? "true" : "false", text: c });
+      b.addEventListener("click", function () {
+        activeCat = c;
+        filters.querySelectorAll(".chip").forEach(function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+        render();
+      });
+      filters.appendChild(b);
+    });
+  }
+
+  /* ---------------- Register-interest form ---------------- */
+  function openDialog(item) {
+    current = item;
+    form.hidden = false; doneEl.hidden = true; errEl.hidden = true;
+    $("dlg-for").textContent = item.title;
+    submitBtn.disabled = false; submitBtn.textContent = "Register interest";
+    if (dlg.showModal) dlg.showModal(); else dlg.setAttribute("open", "");
+    $("f-name").focus();
+  }
+  function closeDialog() { if (dlg.close) dlg.close(); else dlg.removeAttribute("open"); }
+  function fail(msg) { errEl.textContent = msg; errEl.hidden = false; submitBtn.disabled = false; submitBtn.textContent = "Register interest"; }
+
+  $("cancel").addEventListener("click", closeDialog);
+  $("close").addEventListener("click", closeDialog);
+  dlg.addEventListener("click", function (e) { if (e.target === dlg) closeDialog(); });
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    errEl.hidden = true;
+    var name = form.elements["name"].value.trim();
+    var email = form.elements["email"].value.trim();
+    var country = form.elements["country"].value;
+    if (!name) return fail("Please add your name.");
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) return fail("Please check your email address.");
+    if (!country) return fail("Please choose where the piece would be delivered.");
+    if (!form.elements["consent"].checked) return fail("Please tick the box so we can email you about this piece.");
+    if (SHEET_ENDPOINT.indexOf("https://") !== 0) return fail("The form is not connected yet. Please email " + CONTACT_EMAIL + ".");
+
+    var data = new URLSearchParams({
+      item_id: current.id, item_title: current.title, name: name, email: email, country: country,
+      note: form.elements["note"].value.trim(), consent: "yes", website: form.elements["website"].value,
+      page: location.origin + location.pathname, referrer: document.referrer.slice(0, 200),
+      utm_source: utm.utm_source || "", utm_medium: utm.utm_medium || "",
+      utm_campaign: utm.utm_campaign || "", utm_content: utm.utm_content || ""
+    });
+
+    submitBtn.disabled = true; submitBtn.textContent = "Sending";
+    fetch(SHEET_ENDPOINT, { method: "POST", body: data })
+      .then(function (r) { return r.json(); })
+      .then(function (out) {
+        if (!out || !out.ok) throw new Error((out && out.error) || "failed");
+        form.hidden = true; doneEl.hidden = false;
+        $("done-text").textContent = "Thank you, " + name.split(" ")[0] + ". We will email " + email + " as soon as the " + current.title + " is ready to ship.";
+        form.reset();
+        if (typeof window.gtag === "function") {
+          window.gtag("event", "generate_lead", { item_id: current.id, item_name: current.title, country: country });
+        }
+      })
+      .catch(function () {
+        fail("Sorry, that did not send. Please try again, or email " + CONTACT_EMAIL + " and mention the " + current.title + ".");
+      });
+  });
+
+  renderFilters();
+  render();
+
+  /* Links: shop.html#regeneration opens the trees tab; shop.html#item-id opens and highlights a piece. */
+  function followHash(fromMenu) {
+    var hash = decodeURIComponent(location.hash.slice(1));
+    if (hash === "regeneration") {
+      showTab("regeneration", { scroll: fromMenu });
+    } else if (!hash) {
+      showTab("collection", { scroll: fromMenu });
+    } else {
+      var linked = document.getElementById(hash);
+      if (linked && linked.classList.contains("card")) {
+        showTab("collection");
+        linked.classList.add("is-linked"); linked.scrollIntoView({ block: "start" });
+      }
+    }
+  }
+  followHash(false);
+  window.addEventListener("hashchange", function () { followHash(true); });
+  /* Menu link to plain shop.html while already on the page: show the collection tab. */
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest && e.target.closest(".nvm-links a");
+    if (a && a.getAttribute("href") === "shop.html") {
+      e.preventDefault();
+      history.replaceState(null, "", location.pathname + location.search);
+      followHash(true);
+    }
+  });
+})();
+</script>
+</body>
+</html>
