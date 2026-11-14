@@ -28,9 +28,8 @@
   var TAGLINE = "Chettinad, Tamil Nadu and Ceredigion, Wales";
 
   var SOCIAL = [
-    { label: "Instagram", href: "https://instagram.com/nirvanam_collective" },
-    { label: "Studio on Instagram", href: "https://instagram.com/nirvanam_studio" },
-    { label: "Pinterest", href: "https://www.pinterest.com/nirvanam" },
+    { label: "Instagram", href: "https://www.instagram.com/nirvanam_studio/" },
+    { label: "Pinterest", href: "https://pin.it/3PfJGmDCC" },
     { label: "Films", href: "https://youtube.com/@nirvanam_quests" }
   ];
 
