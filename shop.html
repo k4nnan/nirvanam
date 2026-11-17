@@ -167,6 +167,7 @@
   footer p { margin: 0; }
   :focus-visible { outline: 2px solid var(--ochre); outline-offset: 2px; }
 </style>
+<script src="tracking.js"></script>
 </head>
 <body>
 
@@ -611,9 +612,9 @@
         form.hidden = true; doneEl.hidden = false;
         $("done-text").textContent = "Thank you, " + name.split(" ")[0] + ". We will email " + email + " as soon as the " + current.title + " is ready to ship.";
         form.reset();
-        if (typeof window.gtag === "function") {
-          window.gtag("event", "generate_lead", { item_id: current.id, item_name: current.title, country: country });
-        }
+        (window.dataLayer = window.dataLayer || []).push({
+          event: "generate_lead", item_id: current.id, item_name: current.title, country: country
+        });
       })
       .catch(function () {
         fail("Sorry, that did not send. Please try again, or email " + CONTACT_EMAIL + " and mention the " + current.title + ".");
