@@ -93,6 +93,8 @@
     });
     document.body.appendChild(banner);
     place();
+    /* the signup bar slides in after load, so keep checking while the banner is up */
+    var timer = setInterval(function () { if (banner) place(); else clearInterval(timer); }, 300);
   }
 
   /* sit above the sticky signup bar on the home page instead of covering it */
