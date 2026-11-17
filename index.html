@@ -314,7 +314,7 @@ footer ul{list-style:none;display:flex;flex-wrap:wrap;gap:8px 22px}
       <li><a href="https://pin.it/3PfJGmDCC" target="_blank" rel="noopener">Pinterest</a></li>
       <li><a href="https://youtube.com/@nirvanam_quests" target="_blank" rel="noopener">Films</a></li>
     </ul>
-    <p>&copy; 2026 Nirvanam, Ceredigion and Chettinad. <a href="privacy.html">Privacy</a></p>
+    <p>&copy; 2026 Nirvanam Ltd, Ceredigion and Chettinad. <a href="privacy.html">Privacy</a></p>
   </div>
 </footer>
 
@@ -391,7 +391,8 @@ function track(event, data){
   data = data || {};
   data.variant = variant;
   data.source = attribution.source;
-  if (window.dataLayer && !window.gtag) window.dataLayer.push(Object.assign({event: event}, data));
+  if (window.nvAnalytics) window.nvAnalytics.event(event, data);
+  else if (window.dataLayer && !window.gtag) window.dataLayer.push(Object.assign({event: event}, data));
   if (window.gtag) window.gtag("event", event, data);
   if (window.plausible) window.plausible(event, {props: data});
 }
@@ -530,9 +531,10 @@ $all(".signup").forEach(function(block){
       consent: CONSENT,
       page: location.href.split("#")[0],
       ua: navigator.userAgent,
+      ga_client_id: (window.nvAnalytics && window.nvAnalytics.clientId()) || "",
       website: form.querySelector("input[name=website]").value
     }).then(function(res){
-      track("email_captured", {place: block.getAttribute("data-place")});
+      track("email_captured", {place: block.getAttribute("data-place"), lead_id: signupId});
       onSuccess(block, res);
     }).catch(function(err){
       btn.disabled = false;

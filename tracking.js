@@ -124,6 +124,75 @@
     privacy.parentNode.insertBefore(a, privacy.nextSibling.nextSibling);
   }
 
+  /* The anonymous Google Analytics ID for this browser (from the _ga cookie).
+     Empty until the visitor has accepted analytics. The forms send it with a
+     signup so the earlier anonymous visits can be joined to that lead. */
+  function clientId() {
+    var m = document.cookie.match(/(?:^|;\s*)_ga=GA\d+\.\d+\.(\d+\.\d+)/);
+    return m ? m[1] : "";
+  }
+  /* Every event parameter the GTM event tag reads. Each push sets all of them
+     (undefined when not given) so a value from an earlier event is never carried
+     over by the data layer into a later one. */
+  var PARAMS = ["variant", "source", "segment", "place", "item_id", "item_name", "country",
+    "cta_text", "cta_type", "cta_location", "cta_url", "cta_outbound", "lead_id"];
+  function event(name, data) {
+    var push = { event: name };
+    data = data || {};
+    PARAMS.forEach(function (k) { push[k] = data[k] === undefined || data[k] === "" ? undefined : String(data[k]); });
+    window.dataLayer.push(push);
+  }
+
+  /* A random ID for one form submission. It is sent to Google Analytics with the
+     signup event and saved in the sheet with the signup, alongside the anonymous
+     GA client ID, so a lead can be joined to its browsing history in BigQuery. */
+  function leadId() {
+    return Date.now().toString(36) + Math.random().toString(36).slice(2, 8);
+  }
+
+  window.nvAnalytics = { clientId: clientId, event: event, leadId: leadId, openCookieChoice: showBanner };
+
+  /* Every call to action: one cta_click event per click on a link, button or tab.
+     Keys are always set (undefined when not relevant) so a value from an earlier
+     event is never carried over by the data layer. */
+  function ctaText(el) {
+    return (el.getAttribute("aria-label") || el.textContent || "").replace(/\s+/g, " ").trim().slice(0, 80);
+  }
+  function ctaLocation(el) {
+    if (el.closest(".nvm-drawer")) return "menu";
+    if (el.closest(".nvm-hd")) return "header";
+    if (el.closest("dialog")) return "dialog";
+    if (el.closest("#bar")) return "sticky_bar";
+    if (el.closest("footer")) return "footer";
+    var signup = el.closest("[data-place]");
+    if (signup) return "signup_" + signup.getAttribute("data-place");
+    if (el.closest("article.card")) return "product_card";
+    var part = el.closest("section[id],[role=tabpanel][id],[role=tablist],main");
+    if (part) return part.id || part.getAttribute("role") || "main";
+    return "page";
+  }
+  document.addEventListener("click", function (e) {
+    var el = e.target && e.target.closest && e.target.closest("a,button,[role=button],[role=tab]");
+    if (!el || el.closest(".nv-cookie")) return;
+    var url, outbound;
+    if (el.tagName === "A" && el.getAttribute("href")) {
+      try {
+        var u = new URL(el.href, location.href);
+        url = u.origin + u.pathname + u.hash;          /* no query string */
+        outbound = u.hostname !== location.hostname ? "true" : "false";
+      } catch (err) {}
+    }
+    var card = el.closest("article.card[id]");
+    event("cta_click", {
+      cta_text: ctaText(el),
+      cta_type: el.tagName === "A" ? "link" : (el.getAttribute("role") === "tab" ? "tab" : "button"),
+      cta_location: ctaLocation(el),
+      cta_url: url,
+      cta_outbound: outbound,
+      item_id: card ? card.id : undefined
+    });
+  }, true);
+
   function ready() {
     addFooterLink();
     if (stored !== "granted" && stored !== "denied") showBanner();

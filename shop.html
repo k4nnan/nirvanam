@@ -308,7 +308,7 @@
 <footer>
   <div class="wrap">
     <p>Prices are indicative until confirmed by email. We use your details only to contact you about the pieces you choose.</p>
-    <p>&copy; <span id="yr"></span> Nirvanam, Ceredigion and Chettinad. <a href="privacy.html">Privacy</a></p>
+    <p>&copy; <span id="yr"></span> Nirvanam Ltd, Ceredigion and Chettinad. <a href="privacy.html">Privacy</a></p>
   </div>
 </footer>
 
@@ -596,12 +596,15 @@
     if (!form.elements["consent"].checked) return fail("Please tick the box so we can email you about this piece.");
     if (SHEET_ENDPOINT.indexOf("https://") !== 0) return fail("The form is not connected yet. Please email " + CONTACT_EMAIL + ".");
 
+    var leadId = window.nvAnalytics ? window.nvAnalytics.leadId() : String(Date.now());
     var data = new URLSearchParams({
+      lead_id: leadId,
       item_id: current.id, item_title: current.title, name: name, email: email, country: country,
       note: form.elements["note"].value.trim(), consent: "yes", website: form.elements["website"].value,
       page: location.origin + location.pathname, referrer: document.referrer.slice(0, 200),
       utm_source: utm.utm_source || "", utm_medium: utm.utm_medium || "",
-      utm_campaign: utm.utm_campaign || "", utm_content: utm.utm_content || ""
+      utm_campaign: utm.utm_campaign || "", utm_content: utm.utm_content || "",
+      ga_client_id: (window.nvAnalytics && window.nvAnalytics.clientId()) || ""
     });
 
     submitBtn.disabled = true; submitBtn.textContent = "Sending";
@@ -612,9 +615,9 @@
         form.hidden = true; doneEl.hidden = false;
         $("done-text").textContent = "Thank you, " + name.split(" ")[0] + ". We will email " + email + " as soon as the " + current.title + " is ready to ship.";
         form.reset();
-        (window.dataLayer = window.dataLayer || []).push({
-          event: "generate_lead", item_id: current.id, item_name: current.title, country: country
-        });
+        var leadData = { item_id: current.id, item_name: current.title, country: country, lead_id: leadId };
+        if (window.nvAnalytics) window.nvAnalytics.event("generate_lead", leadData);
+        else (window.dataLayer = window.dataLayer || []).push(Object.assign({ event: "generate_lead" }, leadData));
       })
       .catch(function () {
         fail("Sorry, that did not send. Please try again, or email " + CONTACT_EMAIL + " and mention the " + current.title + ".");
