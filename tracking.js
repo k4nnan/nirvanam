@@ -68,7 +68,7 @@
       css.textContent =
         ".nv-cookie{position:fixed;left:16px;right:16px;bottom:16px;z-index:1000;max-width:560px;margin:0 auto;" +
         "background:#fff;color:#2B1F18;border:1px solid #BBC9A0;border-radius:6px;padding:16px 18px;" +
-        "box-shadow:0 8px 28px rgba(43,31,24,.16);font:inherit;font-size:15px;line-height:1.5}" +
+        "box-shadow:0 8px 28px rgba(43,31,24,.16);font:inherit;font-size:15px;line-height:1.5;transition:bottom .2s}" +
         ".nv-cookie p{margin:0 0 12px}" +
         ".nv-cookie a{color:inherit}" +
         ".nv-cookie-btns{display:flex;gap:10px;flex-wrap:wrap}" +
@@ -92,7 +92,22 @@
       if (v) decide(v);
     });
     document.body.appendChild(banner);
+    place();
   }
+
+  /* sit above the sticky signup bar on the home page instead of covering it */
+  function place() {
+    if (!banner) return;
+    var bar = document.getElementById("bar");
+    var lift = 0;
+    if (bar) {
+      var r = bar.getBoundingClientRect();
+      if (r.height && r.top < window.innerHeight) lift = Math.max(0, window.innerHeight - r.top);
+    }
+    banner.style.bottom = (lift + 16) + "px";
+  }
+  window.addEventListener("scroll", place, { passive: true });
+  window.addEventListener("resize", place);
 
   /* lets a visitor change their mind: a "Cookies" link beside Privacy in the footer */
   function addFooterLink() {
