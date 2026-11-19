@@ -3,6 +3,12 @@
    Nothing from Google loads, and no cookie is set, until the visitor accepts.
    The choice is kept in localStorage under "nv_consent" ("granted" | "denied").
    Pages push events to window.dataLayer; GTM forwards them to GA4. */
+/* Clickjacking guard: GitHub Pages cannot send X-Frame-Options, so refuse to run inside another site's frame. */
+if (window.top !== window.self) {
+  try { if (window.top.location.hostname !== window.location.hostname) window.top.location = window.location.href; }
+  catch (e) { window.top.location = window.location.href; }
+}
+
 (function () {
   var GTM_ID = "GTM-KRBK5BNP";
   var KEY = "nv_consent";

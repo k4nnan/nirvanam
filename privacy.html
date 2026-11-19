@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://*.googletagmanager.com; connect-src 'self' https://script.google.com https://script.googleusercontent.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; frame-src https://*.googletagmanager.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Privacy notice | Nirvanam Studio</title>
 <meta name="description" content="How Nirvanam Ltd collects, uses and protects your personal data on nirvanamstudio.com, including analytics cookies and our mailing list.">
@@ -174,10 +176,6 @@ footer{border-top:1px solid var(--line);padding:34px 0 60px;font-size:15px;color
   </div>
 </footer>
 
-<script>
-document.getElementById("cookie-choice").addEventListener("click", function () {
-  if (window.nvAnalytics) window.nvAnalytics.openCookieChoice();
-});
-</script>
+<script src="privacy-page.js"></script>
 </body>
 </html>
