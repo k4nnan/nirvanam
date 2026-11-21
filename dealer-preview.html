@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://thumb.wikimedia.org https://upload.wikimedia.org; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'; object-src 'none'; base-uri 'self'">
+<title>The Chettinad Collection: preview | Nirvanam Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  /* Same tokens as shop.html */
+  :root{--bg:#E4EFCD;--surface:#fff;--ink:#2B1F18;--muted:#685C51;--line:#BBC9A0;--accent:#1F4B3D;--accent-soft:#D2E2B8;--ochre:#B48A1E;--danger:#9B2C1A;
+    --display:'Libre Caslon Display','Libre Caslon Text',Georgia,serif;--body:'Libre Caslon Text',Georgia,serif}
+  *{box-sizing:border-box;min-width:0}
+  body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 var(--body);-webkit-font-smoothing:antialiased;overflow-x:clip}
+  img{display:block;max-width:100%}
+  a{color:var(--accent)}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+  .site-header{background:var(--surface);border-bottom:1px solid var(--line)}
+  .site-header .wrap{display:flex;justify-content:space-between;align-items:center;min-height:60px;gap:12px}
+  .brand{font-family:var(--display);font-size:1.5rem;text-decoration:none;color:var(--ink)}
+  .tag{font-size:.8rem;color:var(--muted)}
+
+  .hero{position:relative;min-height:min(62vh,560px);display:grid;align-items:end;color:#fff;background:#2B1F18}
+  .hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.78}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(43,31,24,0) 30%,rgba(43,31,24,.85))}
+  .hero .wrap{position:relative;z-index:1;padding-block:40px;width:100%}
+  .hero h1{font:400 clamp(2.2rem,6vw,3.6rem)/1.05 var(--display);margin:0 0 10px;text-wrap:balance}
+  .hero p{max-width:60ch;margin:0;font-size:1.05rem;opacity:.95}
+
+  .bar{position:sticky;top:0;z-index:5;background:var(--surface);border-bottom:1px solid var(--line)}
+  .bar .wrap{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;padding-block:10px}
+  .seg{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+  .seg button{font:inherit;font-size:.9rem;border:0;background:none;padding:9px 14px;min-height:40px;cursor:pointer;color:var(--ink)}
+  .seg button[aria-pressed=true]{background:var(--ink);color:#fff}
+  .stats{font-size:.9rem;color:var(--muted);margin-inline-start:auto}
+  .btn{font:inherit;font-size:.9rem;border:1px solid var(--ink);background:var(--ink);color:#fff;border-radius:999px;padding:9px 16px;min-height:40px;cursor:pointer}
+  .btn.ghost{background:none;color:var(--ink)}
+  button:focus-visible{outline:3px solid var(--ochre);outline-offset:2px}
+
+  .note{background:var(--accent-soft);color:var(--accent);padding:12px 16px;border-radius:3px;font-size:.92rem;margin:22px 0 0}
+
+  section.cat{padding:44px 0 8px;border-bottom:1px solid var(--line)}
+  .cat-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:24px;align-items:stretch}
+  .cat-head h2{font:400 clamp(1.7rem,4.5vw,2.4rem)/1.1 var(--display);margin:0 0 8px}
+  .cat-head p{margin:0 0 8px;color:var(--muted);max-width:52ch}
+  .room{position:relative;border-radius:3px;overflow:hidden;min-height:220px;background:#cdbfa7}
+  .room img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .room span a{color:#fff}
+  .room .fail{position:absolute;inset:0;display:grid;place-items:center;padding:12px;font-size:.85rem;color:var(--muted)}
+  .room span{position:absolute;left:10px;bottom:10px;background:rgba(43,31,24,.75);color:#fff;font-size:.75rem;padding:3px 8px;border-radius:2px}
+  .placeholder{background:var(--ochre);color:#fff;font-size:.95rem;padding:12px 0;line-height:1.45}
+  .placeholder strong{font-weight:700}
+  .ph .frame .tagp{position:absolute;right:8px;bottom:8px;background:rgba(43,31,24,.78);color:#fff;font-size:.7rem;padding:2px 8px;border-radius:999px}
+  .gap{display:inline-block;margin-top:6px;font-size:.85rem;color:var(--danger);font-weight:700}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(210px,44vw),1fr));gap:14px;margin:22px 0 30px}
+  .ph{background:var(--surface);border:1px solid var(--line);border-radius:3px;overflow:hidden;display:flex;flex-direction:column}
+  .ph .frame{aspect-ratio:4/5;background:#efe7d6;position:relative}
+  .ph .frame img{width:100%;height:100%;object-fit:cover}
+  .ph .frame .fail{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:12px;font-size:.85rem;color:var(--muted)}
+  .ph .meta{padding:10px 12px 0;font-size:.78rem;color:var(--muted);line-height:1.4}
+  .ph .meta a{color:var(--muted)}
+  .ph .acts{display:grid;grid-template-columns:1fr 1fr;gap:6px;padding:10px 12px 12px;margin-top:auto}
+  .ph .acts button{font:inherit;font-size:.88rem;min-height:44px;border-radius:3px;border:1px solid var(--line);background:#fff;cursor:pointer;color:var(--ink)}
+  .ph[data-s=ok]{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent)}
+  .ph[data-s=ok] .acts .ok{background:var(--accent);border-color:var(--accent);color:#fff}
+  .ph[data-s=no]{opacity:.5}
+  .ph[data-s=no] .acts .no{background:var(--danger);border-color:var(--danger);color:#fff}
+  .badge{position:absolute;top:8px;left:8px;background:var(--surface);font-size:.72rem;padding:2px 8px;border-radius:999px;color:var(--ink)}
+
+  /* Dealer view: approved photos only, no review controls */
+  body.dealer .acts,body.dealer .stats,body.dealer .review-only{display:none}
+  body.dealer .ph:not([data-s=ok]){display:none}
+  body.dealer .ph[data-s=ok]{box-shadow:none;border-color:var(--line)}
+  body.dealer section.cat.empty{display:none}
+  body.review .dealer-only{display:none}
+
+  footer{padding:30px 0 50px;font-size:.85rem;color:var(--muted)}
+  .toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:10px 16px;border-radius:999px;font-size:.9rem;opacity:0;transition:opacity .2s;pointer-events:none}
+  .toast.on{opacity:1}
+  textarea{width:100%;font:14px/1.4 ui-monospace,monospace;min-height:120px;margin-top:10px}
+  @media (max-width:700px){.grid{gap:10px}.ph .acts{grid-template-columns:1fr}.ph .meta{font-size:.72rem}.cat-head{grid-template-columns:1fr}.stats{margin-inline-start:0;width:100%}}
+  @media (prefers-reduced-motion:reduce){.toast{transition:none}}
+</style>
+</head>
+<body>
+<header class="site-header"><div class="wrap"><a class="brand" href="index.html">Nirvanam Studio</a><span class="tag">Preview</span></div></header>
+<div class="placeholder" role="note"><div class="wrap"><strong>Placeholder examples.</strong> These photos show the kinds of pieces and the style of listing we plan. They are not pieces for sale. Real listings will show photos of each dealer's own pieces.</div></div>
+
+<div class="hero">
+  <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Attangudi_Palace-WUS04270-Verbessert-RR.jpg/960px-Attangudi_Palace-WUS04270-Verbessert-RR.jpg" alt="Painted hall of the Attangudi Palace, Chettinad">
+  <div class="wrap">
+    <h1>The Chettinad Collection</h1>
+    <p>How your pieces would be shown to buyers in the UK, Europe and the USA. We photograph each piece in your showroom, list it, and buy it from you when a buyer commits.</p>
+  </div>
+</div>
+
+
+<main class="wrap">
+  <div id="cats"></div>
+</main>
+<footer class="wrap">All photos are placeholder examples from Wikimedia Commons, used under their free licences. Credits are under each photo, with a link to its licence. Nirvanam Ltd, company number 17460788.</footer>
+
+<script>
+{
+const T="https://thumb.wikimedia.org/wikipedia/commons/thumb/", U="https://upload.wikimedia.org/wikipedia/commons/";
+const x=s=>s.startsWith("T:")?T+s.slice(2):U+s.slice(2);
+const L={"CC BY-SA 4.0":"https://creativecommons.org/licenses/by-sa/4.0","CC BY-SA 3.0":"https://creativecommons.org/licenses/by-sa/3.0","CC BY 2.0":"https://creativecommons.org/licenses/by/2.0","CC BY 3.0":"https://creativecommons.org/licenses/by/3.0","CC BY 4.0":"https://creativecommons.org/licenses/by/4.0","CC BY-SA 1.0":"https://creativecommons.org/licenses/by-sa/1.0","CC BY-SA 2.5 in":"https://creativecommons.org/licenses/by-sa/2.5/in/","CC0":"https://creativecommons.org/publicdomain/zero/1.0/","Public domain":""};
+// [id, image, Commons file, author, licence, view]
+const CATS=[
+ {id:"lamps",name:"Brass lamps",blurb:"Kuthu vilakku and hanging lamps, polished or with their old patina. The easiest pieces to post abroad.",room:1,photos:[
+  ["lamp-c","T:e/e5/Mayilmuga_kuthuvilakku.jpg/960px-Mayilmuga_kuthuvilakku.jpg","Mayilmuga_kuthuvilakku.jpg","Booradleyp","CC BY-SA 3.0","Peacock top"],
+  ["lamp-d","U:a/a7/Annapatchimuga_kuthuvilakku.jpg","Annapatchimuga_kuthuvilakku.jpg","Booradleyp","CC BY-SA 3.0","Swan top"],
+  ["lamp-f","T:3/30/Antique_vilakku_03.jpg/960px-Antique_vilakku_03.jpg","Antique_vilakku_03.jpg","Vis M","CC BY-SA 4.0","Group shot"],
+  ["lamp-g","T:9/94/Nilavilakku_Different_sizes.jpg/960px-Nilavilakku_Different_sizes.jpg","Nilavilakku_Different_sizes.jpg","Akhilan","CC BY-SA 2.5 in","Sizes side by side"]]},
+ {id:"oonjal",name:"Oonjal swings",blurb:"Teak swings hung from the ceiling on brass chains, the centrepiece of a Chettinad hall.",room:0,isNew:1,photos:[
+  ["oon-a","T:3/32/Teak_swing.jpg/960px-Teak_swing.jpg","Teak_swing.jpg","Vis M","CC BY-SA 4.0","Swing with canopy"],
+  ["oon-b","T:b/b0/Teak_swing_02.jpg/960px-Teak_swing_02.jpg","Teak_swing_02.jpg","Vis M","CC BY-SA 4.0","Three-quarter view"],
+  ["oon-c","T:6/6e/Teak_swing_03.jpg/960px-Teak_swing_03.jpg","Teak_swing_03.jpg","Vis M","CC BY-SA 4.0","Side view"],
+  ["oon-d","T:9/90/Swinging_cot_in_Nilambur_teak_museum_02.jpg/960px-Swinging_cot_in_Nilambur_teak_museum_02.jpg","Swinging_cot_in_Nilambur_teak_museum_02.jpg","Ganesh Mohan T","CC BY-SA 4.0","Swinging cot"],
+  ["oon-e","T:9/9a/An_Indian_swing_gifted_to_First_Lady_Jacqueline_Kennedy_3%29.jpg/960px-An_Indian_swing_gifted_to_First_Lady_Jacqueline_Kennedy_3%29.jpg","An_Indian_swing_gifted_to_First_Lady_Jacqueline_Kennedy_3).jpg","Abbie Rowe","Public domain","Swing in a room"]]},
+ {id:"chairs",name:"Chairs and easy chairs",blurb:"Planter's chairs, easy chairs and carved armchairs in teak and rosewood.",room:5,isNew:1,photos:[
+  ["chr-a","T:2/2a/Antique_Wooden_Plantation_Chair.jpg/960px-Antique_Wooden_Plantation_Chair.jpg","Antique_Wooden_Plantation_Chair.jpg","Amitbalani","CC0","Planter's chair"],
+  ["chr-b","T:f/fe/Easy_chair_from_teak.jpg/960px-Easy_chair_from_teak.jpg","Easy_chair_from_teak.jpg","Vis M","CC BY-SA 4.0","Easy chair"],
+  ["chr-c","T:7/78/Pedestal_central_table_and_easy_chair_from_teak.jpg/960px-Pedestal_central_table_and_easy_chair_from_teak.jpg","Pedestal_central_table_and_easy_chair_from_teak.jpg","Vis M","CC BY-SA 4.0","Easy chair with table"],
+  ["chr-d","T:0/0e/Chair-padmanabapuram-palace.jpg/960px-Chair-padmanabapuram-palace.jpg","Chair-padmanabapuram-palace.jpg","Parvathisri","CC BY-SA 3.0","Palace armchair"],
+  ["chr-e","T:c/ce/Teakwood_folding_chair.jpg/960px-Teakwood_folding_chair.jpg","Teakwood_folding_chair.jpg","Vis M","CC BY-SA 4.0","Folding chair"],
+  ["chr-f","T:3/31/Sankheda_sofa_chair.jpg/960px-Sankheda_sofa_chair.jpg","Sankheda_sofa_chair.jpg","Nvvchar","CC BY-SA 4.0","Upholstered armchair"],
+  ["chr-g","T:d/d0/Indian_-_Side_Chair_-_Walters_65118.jpg/960px-Indian_-_Side_Chair_-_Walters_65118.jpg","Indian_-_Side_Chair_-_Walters_65118.jpg","Walters Art Museum","Public domain","Side chair, studio"],
+  ["chr-h","T:e/ed/The_sofa_sets_inside_the_museum.JPG/960px-The_sofa_sets_inside_the_museum.JPG","The_sofa_sets_inside_the_museum.JPG","Anilbhardwajnoida","CC BY-SA 3.0","Pair in a room"]]},
+ {id:"tables",name:"Tables and desks",blurb:"Round and pedestal tables, tile-top tables, accounts desks and roll-tops.",room:3,isNew:1,photos:[
+  ["tbl-a","T:1/1d/Table%2C_Round_Table%2C_%E0%B4%AE%E0%B5%87%E0%B4%B6%2C_%E0%B4%B5%E0%B4%9F%E0%B5%8D%E0%B4%9F%E0%B4%AE%E0%B5%87%E0%B4%B6.JPG/960px-Table%2C_Round_Table%2C_%E0%B4%AE%E0%B5%87%E0%B4%B6%2C_%E0%B4%B5%E0%B4%9F%E0%B5%8D%E0%B4%9F%E0%B4%AE%E0%B5%87%E0%B4%B6.JPG","Table,_Round_Table,_മേശ,_വട്ടമേശ.JPG","കാക്കര","CC BY-SA 3.0","Round table"],
+  ["tbl-b","T:4/40/Patta_tile_table.jpg/960px-Patta_tile_table.jpg","Patta_tile_table.jpg","Vis M","CC BY-SA 4.0","Tile-top table"],
+  ["tbl-c","T:1/1c/Patta_tile_table_%28topview%29.jpg/960px-Patta_tile_table_%28topview%29.jpg","Patta_tile_table_(topview).jpg","Vis M","CC BY-SA 4.0","Tile top, from above"],
+  ["tbl-d","T:7/7a/Pedestal_central_table_from_teak.jpg/960px-Pedestal_central_table_from_teak.jpg","Pedestal_central_table_from_teak.jpg","Vis M","CC BY-SA 4.0","Pedestal table"],
+  ["tbl-e","T:c/ca/Table_used_by_Lakshminath_Bezbaruah.jpg/960px-Table_used_by_Lakshminath_Bezbaruah.jpg","Table_used_by_Lakshminath_Bezbaruah.jpg","অনামিকা(চুমু) বড়া","CC BY-SA 4.0","Marble-top table"],
+  ["tbl-f","T:7/74/Indian_-_Tilt-top_Table_-_Walters_65114.jpg/960px-Indian_-_Tilt-top_Table_-_Walters_65114.jpg","Indian_-_Tilt-top_Table_-_Walters_65114.jpg","Walters Art Museum","Public domain","Inlaid tilt-top, studio"],
+  ["tbl-g","T:9/93/Table_from_Goa%2C_V%26A_London.jpg/960px-Table_from_Goa%2C_V%26A_London.jpg","Table_from_Goa,_V&A_London.jpg","14GTR","CC0","Inlaid teak table"],
+  ["tbl-h","T:a/aa/STUDY_AND_ACCOUNTS_TABLE.jpg/960px-STUDY_AND_ACCOUNTS_TABLE.jpg","STUDY_AND_ACCOUNTS_TABLE.jpg","Gowthamgowda346","CC BY-SA 3.0","Accounts desk"],
+  ["tbl-i","T:8/88/Rolltop_desk_from_teak.jpg/960px-Rolltop_desk_from_teak.jpg","Rolltop_desk_from_teak.jpg","Vis M","CC BY-SA 4.0","Roll-top desk"]]},
+ {id:"stools",name:"Stools and teapoys",blurb:"Low teak teapoys, stools and rope-seat stools.",room:4,isNew:1,gap:"Only two free photos found. Photograph a dealer's stools to fill this out.",photos:[
+  ["stl-a","T:2/22/Teak_teapoys.jpg/960px-Teak_teapoys.jpg","Teak_teapoys.jpg","Vis M","CC BY-SA 4.0","Teapoys"],
+  ["stl-b","T:2/22/Rope_chair.jpg/960px-Rope_chair.jpg","Rope_chair.jpg","Chhaya mandi","CC BY-SA 4.0","Rope-seat stool"]]},
+ {id:"almirah",name:"Almirahs and cabinets",blurb:"Teak almirahs, glass-fronted cabinets and corner stands.",room:4,isNew:1,photos:[
+  ["alm-a","T:a/a5/Wood_Cupboard_Heritage_Museum_Padmanabhapuram_Mar24_A7C_10167.jpg/960px-Wood_Cupboard_Heritage_Museum_Padmanabhapuram_Mar24_A7C_10167.jpg","Wood_Cupboard_Heritage_Museum_Padmanabhapuram_Mar24_A7C_10167.jpg","Timothy A. Gonsalves","CC BY-SA 4.0","Carved almirah"],
+  ["alm-b","T:1/1b/Kanadukathan-Camal_Heritage_House-WUS04159.jpg/960px-Kanadukathan-Camal_Heritage_House-WUS04159.jpg","Kanadukathan-Camal_Heritage_House-WUS04159.jpg","Rainer Halama","CC BY-SA 4.0","In a Chettinad house"],
+  ["alm-c","T:6/6b/Porbandar_during_Dwaraka_DWARASPDB_2015_%28117%29.jpg/960px-Porbandar_during_Dwaraka_DWARASPDB_2015_%28117%29.jpg","Porbandar_during_Dwaraka_DWARASPDB_2015_(117).jpg","Vinayaraj","CC BY-SA 4.0","Glass-fronted cabinet"],
+  ["alm-d","T:3/33/Teak_corner_stand.jpg/960px-Teak_corner_stand.jpg","Teak_corner_stand.jpg","Vis M","CC BY-SA 4.0","Corner stand"]]},
+ {id:"chests",name:"Chests: petti and pathayam",blurb:"Teak strongboxes, grain chests and medicine boxes with brass fittings.",room:6,isNew:1,photos:[
+  ["cst-a","T:b/b0/Teak_pettakam_02.jpg/960px-Teak_pettakam_02.jpg","Teak_pettakam_02.jpg","Vis M","CC BY-SA 4.0","Pettakam, front"],
+  ["cst-b","T:9/98/Teak_pettakam.jpg/960px-Teak_pettakam.jpg","Teak_pettakam.jpg","Vis M","CC BY-SA 4.0","Pettakam, second view"],
+  ["cst-c","T:8/85/Teak_pathayam.jpg/960px-Teak_pathayam.jpg","Teak_pathayam.jpg","Vis M","CC BY-SA 4.0","Pathayam (grain chest)"],
+  ["cst-d","T:7/7e/Pathayam_at_Arakkal_Palace.JPG/960px-Pathayam_at_Arakkal_Palace.JPG","Pathayam_at_Arakkal_Palace.JPG","Shijaz (English Wikipedia)","CC BY-SA 3.0","Pathayam in a palace"],
+  ["cst-e","T:2/22/Pallamkuzhi_and_Teak_Medicine_box.jpg/960px-Pallamkuzhi_and_Teak_Medicine_box.jpg","Pallamkuzhi_and_Teak_Medicine_box.jpg","Vis M","CC BY-SA 4.0","Medicine box and pallanguzhi"]]},
+ {id:"beds",name:"Beds and cradles",blurb:"Four-poster beds and hanging teak cradles.",room:2,isNew:1,photos:[
+  ["bed-a","T:a/aa/Ornamental_Bed_Stead.JPG/960px-Ornamental_Bed_Stead.JPG","Ornamental_Bed_Stead.JPG","Rengeshb","CC BY-SA 3.0","Ornamental bedstead"],
+  ["bed-b","T:1/14/Wooden_Four-poster_Bed_-_Bedroom_-_Swami_Vivekanandas_Ancestral_House_-_Kolkata_2011-10-22_6101.JPG/960px-Wooden_Four-poster_Bed_-_Bedroom_-_Swami_Vivekanandas_Ancestral_House_-_Kolkata_2011-10-22_6101.JPG","Wooden_Four-poster_Bed_-_Bedroom_-_Swami_Vivekanandas_Ancestral_House_-_Kolkata_2011-10-22_6101.JPG","Biswarup Ganguly","CC BY-SA 4.0","Four-poster bed"],
+  ["bed-c","T:d/d7/Swing_cradle_from_teak.jpg/960px-Swing_cradle_from_teak.jpg","Swing_cradle_from_teak.jpg","Vis M","CC BY-SA 4.0","Swing cradle"],
+  ["bed-d","T:6/63/Swing_cradle_from_teak_02.jpg/960px-Swing_cradle_from_teak_02.jpg","Swing_cradle_from_teak_02.jpg","Vis M","CC BY-SA 4.0","Cradle, second view"],
+  ["bed-e","T:6/65/Falaknuma_Palace_11_-_Bedroom.jpg/960px-Falaknuma_Palace_11_-_Bedroom.jpg","Falaknuma_Palace_11_-_Bedroom.jpg","Bernard Gagnon","CC BY-SA 3.0","Palace bedroom"]]},
+ {id:"carved",name:"Carved panels and brackets",blurb:"Door panels, corbels and pillar brackets in teak, hung as wall pieces.",room:6,photos:[
+  ["carv-a","T:9/96/Teak_Chettinad_door%2C_Asian_Civilisations_Museum_%2813887691547%29.jpg/960px-Teak_Chettinad_door%2C_Asian_Civilisations_Museum_%2813887691547%29.jpg","Teak_Chettinad_door,_Asian_Civilisations_Museum_(13887691547).jpg","Jnzl's Photos","CC BY 2.0","Whole panel"],
+  ["carv-b","T:1/18/Teak_Chettinad_door%2C_Asian_Civilisations_Museum_%2813887691067%29.jpg/960px-Teak_Chettinad_door%2C_Asian_Civilisations_Museum_%2813887691067%29.jpg","Teak_Chettinad_door,_Asian_Civilisations_Museum_(13887691067).jpg","Jnzl's Photos","CC BY 2.0","Panel, low light"],
+  ["carv-c","T:3/3b/Teak_Chettinad_door%2C_Asian_Civilisations_Museum_%2813887710338%29.jpg/960px-Teak_Chettinad_door%2C_Asian_Civilisations_Museum_%2813887710338%29.jpg","Teak_Chettinad_door,_Asian_Civilisations_Museum_(13887710338).jpg","Jnzl's Photos","CC BY 2.0","Carving close-up"],
+  ["carv-d","T:7/76/Motif_on_a_Chettinad_Mansion_door_reused_in_Thiruvananthapuram.jpg/960px-Motif_on_a_Chettinad_Mansion_door_reused_in_Thiruvananthapuram.jpg","Motif_on_a_Chettinad_Mansion_door_reused_in_Thiruvananthapuram.jpg","Nikhil Narayanan","CC BY-SA 4.0","Motif detail"],
+  ["carv-e","T:a/aa/Attangudi_Palace-WUS04305.jpg/960px-Attangudi_Palace-WUS04305.jpg","Attangudi_Palace-WUS04305.jpg","Rainer Halama","CC BY-SA 4.0","Brackets in place"]]},
+ {id:"urli",name:"Urlis and brass vessels",blurb:"Bronze and brass urlis, kindis and water pots, for flowers, water or simply the shine.",room:1,photos:[
+  ["urli-a","T:1/14/Uruli_large.JPG/960px-Uruli_large.JPG","Uruli_large.JPG","RanjithSiji","CC BY 3.0","Large urli"],
+  ["urli-b","T:7/71/Uruli_medium.JPG/960px-Uruli_medium.JPG","Uruli_medium.JPG","RanjithSiji","CC BY 3.0","Medium urli"],
+  ["urli-c","U:b/b0/%E0%B4%93%E0%B4%9F%E0%B5%8D%E0%B4%9F%E0%B5%81%E0%B4%B0%E0%B5%81%E0%B4%B3%E0%B4%BF.jpg","ഓട്ടുരുളി.jpg","Arayilpdas (Malayalam Wikipedia)","Public domain","Bell-metal urli"],
+  ["urli-d","T:6/69/Arakkal_Uruli.JPG/960px-Arakkal_Uruli.JPG","Arakkal_Uruli.JPG","Shijaz (English Wikipedia)","CC BY-SA 3.0","Urli in a palace"],
+  ["urli-e","T:f/fa/Antique-83-selvapuram-veerapandy-coimbatore-India.jpg/960px-Antique-83-selvapuram-veerapandy-coimbatore-India.jpg","Antique-83-selvapuram-veerapandy-coimbatore-India.jpg","Yercaud-elango","CC BY-SA 4.0","Brass vessel"],
+  ["urli-f","T:7/7e/Antique-106-selvapuram-veerapandy-coimbatore-India.jpg/960px-Antique-106-selvapuram-veerapandy-coimbatore-India.jpg","Antique-106-selvapuram-veerapandy-coimbatore-India.jpg","Yercaud-elango","CC BY-SA 4.0","Brass pot"],
+  ["urli-g","T:5/5b/Kindi.jpg/960px-Kindi.jpg","Kindi.jpg","Joe Ravi","CC BY-SA 3.0","Kindi"]]},
+ {id:"enamel",name:"Enamelware and tiffins",blurb:"Old enamel plates, jars and tiffin carriers from Chettiar kitchens.",room:0,photos:[
+  ["enam-a","T:4/41/Nachiappa_Swamigal_Chettinadu_Heritage_Museum-04478.jpg/960px-Nachiappa_Swamigal_Chettinadu_Heritage_Museum-04478.jpg","Nachiappa_Swamigal_Chettinadu_Heritage_Museum-04478.jpg","Rainer Halama","CC BY-SA 4.0","Enamelware display"],
+  ["enam-b","T:5/58/Nachiappa_Swamigal_Chettinadu_Heritage_Museum-04468.jpg/960px-Nachiappa_Swamigal_Chettinadu_Heritage_Museum-04468.jpg","Nachiappa_Swamigal_Chettinadu_Heritage_Museum-04468.jpg","Rainer Halama","CC BY-SA 4.0","Tiffins and pots"],
+  ["enam-d","U:b/bc/Dabba.jpg","Dabba.jpg","Nataraja (French Wikipedia)","CC BY-SA 1.0","Tiffin, plain background"]]},
+ {id:"kottan",name:"Kottan palm baskets",blurb:"Hand-woven palm leaf baskets, still made by women in Chettinad villages.",room:2,photos:[
+  ["kot-a","T:b/b7/Nachiappa_Swamigal_Chettinadu_Heritage_Museum-04475.jpg/960px-Nachiappa_Swamigal_Chettinadu_Heritage_Museum-04475.jpg","Nachiappa_Swamigal_Chettinadu_Heritage_Museum-04475.jpg","Wikimedia Commons","CC0","Red kottan, close"],
+  ["kot-b","T:a/a6/Nachiappa_Swamigal_Chettinadu_Heritage_Museum-04470.jpg/960px-Nachiappa_Swamigal_Chettinadu_Heritage_Museum-04470.jpg","Nachiappa_Swamigal_Chettinadu_Heritage_Museum-04470.jpg","Rainer Halama","CC BY-SA 4.0","Group"],
+  ["kot-c","T:5/57/Nachiappa_Swamigal_Chettinadu_Heritage_Museum-04471.jpg/960px-Nachiappa_Swamigal_Chettinadu_Heritage_Museum-04471.jpg","Nachiappa_Swamigal_Chettinadu_Heritage_Museum-04471.jpg","Rainer Halama","CC BY-SA 4.0","Weave detail"]]},
+ {id:"kitchen",name:"Kitchen antiques",blurb:"Coconut graters and other everyday objects from Chettiar kitchens.",room:3,photos:[
+  ["kit-a","T:4/49/Nachiappa_Swamigal_Chettinadu_Heritage_Museum-04476.jpg/960px-Nachiappa_Swamigal_Chettinadu_Heritage_Museum-04476.jpg","Nachiappa_Swamigal_Chettinadu_Heritage_Museum-04476.jpg","Rainer Halama","CC BY-SA 4.0","Coconut graters"]]},
+ {id:"mirrors",name:"Mirrors and Athangudi tiles",blurb:"Carved mirror frames and the hand-made cement tiles of Athangudi.",room:3,photos:[
+  ["mir-a","T:a/a7/Attangudi_Palace-WUS04314.jpg/960px-Attangudi_Palace-WUS04314.jpg","Attangudi_Palace-WUS04314.jpg","Rainer Halama","CC BY-SA 4.0","Carved mirror cabinet"],
+  ["mir-b","T:f/ff/Attangudi_Palace-WUS04294.jpg/960px-Attangudi_Palace-WUS04294.jpg","Attangudi_Palace-WUS04294.jpg","Rainer Halama","CC BY-SA 4.0","Mirrored doors"],
+  ["mir-c","T:6/6c/Attangudi_Palace-WUS04307.jpg/960px-Attangudi_Palace-WUS04307.jpg","Attangudi_Palace-WUS04307.jpg","Rainer Halama","CC BY-SA 4.0","Tile floor"],
+  ["mir-d","T:b/b3/Athangudi_tiles_01.jpg/960px-Athangudi_tiles_01.jpg","Athangudi_tiles_01.jpg","Saif Arash","CC BY-SA 4.0","Tiles, stacked"],
+  ["mir-e","T:8/82/Athangudi_tiles_02.jpg/960px-Athangudi_tiles_02.jpg","Athangudi_tiles_02.jpg","Saif Arash","CC BY-SA 4.0","Tile pattern"]]}
+];
+const ROOMS=[
+ ["T:6/64/Attangudi_Palace-WUS04295.jpg/960px-Attangudi_Palace-WUS04295.jpg","Attangudi_Palace-WUS04295.jpg","Rainer Halama","CC BY-SA 4.0","Attangudi Palace"],
+ ["T:1/11/Attangudi_Palace-WUS04269-Verbessert-RR.jpg/960px-Attangudi_Palace-WUS04269-Verbessert-RR.jpg","Attangudi_Palace-WUS04269-Verbessert-RR.jpg","Rainer Halama","CC BY-SA 4.0","Attangudi Palace hall"],
+ ["U:0/08/Athangudi_Palace_%284447849140%29.jpg","Athangudi_Palace_(4447849140).jpg","Koshy Koshy","CC BY 2.0","Athangudi Palace main hall"],
+ ["T:a/a1/Attangudi_Palace-WUS04309.jpg/960px-Attangudi_Palace-WUS04309.jpg","Attangudi_Palace-WUS04309.jpg","Rainer Halama","CC BY-SA 4.0","Attangudi Palace courtyard"],
+ ["U:c/c8/Chettinadu_Mansion_%28Kanadukathan%2C_Inde%29_%2814123087643%29.jpg","Chettinadu_Mansion_(Kanadukathan,_Inde)_(14123087643).jpg","Jean-Pierre Dalbéra","CC BY 2.0","Chettinadu Mansion, Kanadukathan"],
+ ["U:3/32/Splendor_of_Chettinad_%284732589451%29.jpg","Splendor_of_Chettinad_(4732589451).jpg","Koshy Koshy","CC BY 2.0","Verandah, Athangudi"],
+ ["T:a/aa/Attangudi_Palace-WUS04305.jpg/960px-Attangudi_Palace-WUS04305.jpg","Attangudi_Palace-WUS04305.jpg","Rainer Halama","CC BY-SA 4.0","Carved brackets, Attangudi Palace"]
+];
+const OK=new Set(["lamp-c", "lamp-d", "lamp-f", "lamp-g", "oon-a", "oon-b", "oon-c", "oon-d", "oon-e", "chr-a", "chr-b", "chr-c", "chr-d", "chr-e", "tbl-b", "tbl-c", "stl-b", "alm-a", "cst-a", "cst-b", "cst-e", "bed-c", "bed-d", "carv-a", "carv-b", "carv-c", "carv-d", "carv-e", "urli-a", "urli-b", "urli-c", "urli-d", "urli-e", "urli-f", "urli-g", "enam-a", "enam-b", "enam-d", "kot-a", "kot-b", "kot-c", "kit-a", "mir-a", "mir-b", "mir-c", "mir-d", "mir-e"]);
+const page=f=>"https://commons.wikimedia.org/wiki/File:"+encodeURIComponent(f);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const credit=(f,by,lic)=>`<a href="${page(f)}" target="_blank" rel="noopener">${esc(by)}</a>, ${L[lic]?`<a href="${L[lic]}" target="_blank" rel="noopener">${esc(lic)}</a>`:esc(lic)}`;
+document.getElementById("cats").innerHTML=CATS.map(c=>({...c,photos:c.photos.filter(p=>OK.has(p[0]))})).filter(c=>c.photos.length).map(c=>{const r=ROOMS[c.room];return `
+<section class="cat" id="${c.id}">
+ <div class="cat-head">
+  <div><h2>${esc(c.name)}</h2><p>${esc(c.blurb)}</p></div>
+  <figure class="room" style="margin:0"><img src="${x(r[0])}" alt="${esc(r[4])}" loading="lazy"><span>${esc(r[4])} · ${credit(r[1],r[2],r[3])}</span></figure>
+ </div>
+ <div class="grid">${c.photos.map(p=>`
+  <article class="ph">
+   <div class="frame"><img src="${x(p[1])}" alt="${esc(c.name)}: ${esc(p[5])}" loading="lazy"><span class="badge">${esc(p[5])}</span><span class="tagp">Example</span></div>
+   <div class="meta">Placeholder example · ${credit(p[2],p[3],p[4])}</div>
+  </article>`).join("")}</div>
+</section>`}).join("");
+document.querySelectorAll(".ph img,.room img").forEach(i=>i.addEventListener("error",()=>{const d=document.createElement("div");d.className="fail";d.textContent="Photo did not load.";i.replaceWith(d)}));
+}
+</script>
+</body>
+</html>
